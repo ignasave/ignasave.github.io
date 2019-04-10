@@ -1,7 +1,7 @@
 var config = {
 	days: [
 		(domingo = [
-			{
+			/*{
 				newsPaper: 'CAPITAL',
 				envy: 0,
 				price: 30,
@@ -30,10 +30,10 @@ var config = {
 				envy: 4,
 				price: 53,
 				earnings: 0.5
-			}
+			}*/
 		]),
 		(lunes = [
-			{
+			/*{
 				newsPaper: 'CAPITAL',
 				envy: 0,
 				price: 30,
@@ -62,10 +62,10 @@ var config = {
 				envy: 4,
 				price: 5,
 				earnings: 0.5
-			}
+			}*/
 		]),
 		(martes = [
-			{
+			/*{
 				newsPaper: 'CAPITAL',
 				envy: 0,
 				price: 30,
@@ -94,10 +94,10 @@ var config = {
 				envy: 4,
 				price: 5,
 				earnings: 0.5
-			}
+			}*/
 		]),
 		(miercoles = [
-			{
+			/*{
 				newsPaper: 'CAPITAL',
 				envy: 0,
 				price: 30,
@@ -126,10 +126,10 @@ var config = {
 				envy: 4,
 				price: 5,
 				earnings: 0.5
-			}
+			}*/
 		]),
 		(jueves = [
-			{
+			/*{
 				newsPaper: 'CAPITAL',
 				envy: 0,
 				price: 30,
@@ -158,10 +158,10 @@ var config = {
 				envy: 4,
 				price: 5,
 				earnings: 0.5
-			}
+			}*/
 		]),
 		(viernes = [
-			{
+			/*{
 				newsPaper: 'CAPITAL',
 				envy: 0,
 				price: 30,
@@ -190,10 +190,10 @@ var config = {
 				envy: 4,
 				price: 5,
 				earnings: 0.5
-			}
+			}*/
 		]),
 		(sabado = [
-			{
+			/*{
 				newsPaper: 'CAPITAL',
 				envy: 0,
 				price: 30,
@@ -222,29 +222,43 @@ var config = {
 				envy: 4,
 				price: 5,
 				earnings: 0.5
-			}
+			}*/
 		])
 	]
 };
 
-window.onload = function() {
-	mostrarDiarios(config.days[0], 0);
-};
-
-function changedata(day) {
-	mostrarDiarios(config.days[day], day);
+var pConfig = {
+	days: [
+		(domingo = []),
+		(lunes = []),
+		(martes = []),
+		(miercoles = []),
+		(jueves = []),
+		(viernes = []),
+		(sabado = []),
+	]
 }
 
-function confirmEdit(day, data) {
-	config.days[day].forEach(newsPaper => {
-		if (newsPaper.newsPaper == data.id) {
+//mostrarDiarios(config.days[0], 0);
+document.addEventListener("DOMContentLoaded", processNewsPapers(0));
+
+
+
+function changedata(day) {
+	mostrarDiarios(pConfig.days[day], day);
+}
+
+async function confirmEdit(day, data) {
+	await processEdit(day, data)
+	await processNewsPapers(day);
+	/*pConfig.days[day].forEach(newsPaper => {
+		if (newsPaper.id == data.id) {
 			newsPaper.newsPaper = data.newsPaper;
 			newsPaper.envy = data.envy;
 			newsPaper.price = data.price;
 			newsPaper.earnings = data.earnings;
 		}
-	});
-	mostrarDiarios(config.days[day], day);
+	});*/
 }
 
 function deleteNewsPaper(day, newsPaperName) {
@@ -253,8 +267,6 @@ function deleteNewsPaper(day, newsPaperName) {
 	mostrarDiarios(config.days[day], day);
 }
 
-function newNewsPaperController(data) {
-	config.days.forEach(day => {
-		day.push(data);
-	});
+function newNewsPaperController(data, day) {
+	processCreateNewsPaper(data, day);
 }
