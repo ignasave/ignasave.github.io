@@ -48,6 +48,8 @@ const processNewsPapers = async (day) => {
     });
     mostrarDiarios(pConfig.days[day], day);
 }
+    
+    
 
 const createNewsPaper = async (body) => {
     try{
@@ -63,6 +65,14 @@ const processCreateNewsPaper = async (body, day) =>{
     await processNewsPapers(day);
 }
 
+const editNewsPaperOnDay = async (day, body) => {
+    try {
+        return await axios.put(`https://cani-ya.herokuapp.com/newspapers/${body.id}/${day}`, body)
+    }
+    catch (error) {
+        console.error(error)
+    }
+}
 
 const processEdit = async (day, body) => {
     let cDay = 'domingo'
