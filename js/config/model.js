@@ -49,8 +49,6 @@ const processNewsPapers = async (day) => {
     mostrarDiarios(pConfig.days[day], day);
 }
     
-    
-
 const createNewsPaper = async (body) => {
     try{
        return await axios.post(`https://cani-ya.herokuapp.com/newspapers`, body)
