@@ -29,11 +29,36 @@
       class="container-flex contenedor mt-0 mb-1 pb-3 bg-dark text-white"
       id="container1"
     >
-    <div class="row pt-3 pl-2">
-        <div class="col-10">
-            <a href="/index.html" class="btn btn-secondary active">REVISTAS</a>
-            <a class="btn btn-secondary" href="/views/newspapers.html">DIARIOS</a>
-            <a class="btn btn-secondary" href="/views/config.html">CONFIGURACION</a>
+      <div class="row pl-2">
+        <div class="col-12">
+          <h2>Menu configuracion</h2>
+        </div>
+        <div class="col-2">
+          <button class="btn btn-light rounded-circle" id="modonoche">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <div class="col-4">
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+              <input
+                type="radio"
+                name="view"
+                id="revistas"
+                autocomplete="off"
+                checked
+              />
+              REVISTAS
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="view" id="diarios" autocomplete="off" />
+              DIARIOS
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="view" id="global" autocomplete="off" />
+              GLOBAL
+            </label>
+          </div>
         </div>
       </div>
     </div>
@@ -76,9 +101,9 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/config.js"></script>
-    <script src="js/revistas/view.js"></script>
-    <script src="js/revistas/controller.js"></script>
-    <script src="js/revistas/index.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/index.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
