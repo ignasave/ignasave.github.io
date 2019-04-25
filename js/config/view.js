@@ -54,9 +54,7 @@ function editView(dia, newsPaperID) {
         </button>
         </td>
         <td>
-        <button class="btn-danger btn rounded-circle" onclick="clearInputs('${
-			DiarioChoosen.id
-		}')">
+        <button class="btn-danger btn rounded-circle" onclick="clearInputs('${DiarioChoosen.id}')">
             <i class="fas fa-times"></i>
         </button>
     `;

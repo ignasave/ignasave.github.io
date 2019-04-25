@@ -30,7 +30,6 @@ function indiceFecha(id) {
 }
 
 function editDia(dia, data) {
-
 	daysD[indiceFecha(dia)].sells.forEach(sell => {
 		data.forEach(datum => {
 			if (sell.newsPaper == datum.newsPaper) {
@@ -41,21 +40,21 @@ function editDia(dia, data) {
 	let nuevoDia = daysD[indiceFecha(dia)];
 	nuevoDia.calcularVentas();
 	daysD[indiceFecha(dia)] = nuevoDia;
-	actualizarEnDB(dia)
+	actualizarEnDB(dia);
 	mostrarDiaExtendido(daysD[indiceFecha(dia)]);
 }
 
 function actualizarEnDB(dia) {
-	daysD[indiceFecha(dia)].sells.forEach(async (sell) => {
+	daysD[indiceFecha(dia)].sells.forEach(async sell => {
 		const body = {
-			quantity : sell.quantity,
-			total : sell.total,
-			totalEarnings : sell.totalEarnings,
-			date : dia
-		}
+			quantity: sell.quantity,
+			total: sell.total,
+			totalEarnings: sell.totalEarnings,
+			date: dia
+		};
 		const response = await peticionDeActualizcion(sell._id, body);
-		console.log(response)
-	})
+		console.log(response);
+	});
 }
 
 function deleteday(day) {

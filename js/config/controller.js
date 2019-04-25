@@ -235,21 +235,19 @@ var pConfig = {
 		(miercoles = []),
 		(jueves = []),
 		(viernes = []),
-		(sabado = []),
+		(sabado = [])
 	]
-}
+};
 
 //mostrarDiarios(config.days[0], 0);
-document.addEventListener("DOMContentLoaded", processNewsPapers(0));
-
-
+document.addEventListener('DOMContentLoaded', processNewsPapers(0));
 
 function changedata(day) {
 	mostrarDiarios(pConfig.days[day], day);
 }
 
 async function confirmEdit(day, data) {
-	await processEdit(day, data)
+	await processEdit(day, data);
 	await processNewsPapers(day);
 }
 
