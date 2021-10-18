@@ -1,0 +1,404 @@
+@import 'colors';
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: $main-bg;
+	color: $bone-text;
+	font-family: 'Barlow', sans-serif;
+	font-style: normal;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 17px;
+	padding-right: 10px;
+	background-color: $grey-400-bg;
+	height: 50px;
+
+	.page-title {
+		font-family: 'Work Sans';
+		font-weight: 600;
+		font-size: 15px;
+		line-height: 18px;
+		text-transform: uppercase;
+		color: $white-text;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+
+		li {
+			float: left;
+
+			a {
+				display: block;
+				text-align: center;
+				padding-left: 7px;
+				padding-right: 7px;
+				text-decoration: none;
+				font-weight: normal;
+				font-size: 12px;
+				line-height: 14px;
+				letter-spacing: 0.025em;
+				color: $darker-bone-text;
+			}
+		}
+	}
+}
+
+header {
+	.hero-title {
+		width: 230px;
+		margin: 90px auto 30px auto;
+
+		h1 {
+			font-size: 30px;
+			line-height: 36px;
+			text-align: center;
+			letter-spacing: 0.26em;
+			text-transform: uppercase;
+			font-weight: 600;
+		}
+	}
+
+	.hero-subtitle {
+		width: 230px;
+		margin: 0 auto 50px auto;
+
+		h3 {
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 24px;
+			text-align: center;
+
+			color: $white-text;
+		}
+	}
+
+	.down-indicator {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.caniya {
+	font-style: normal;
+	text-align: center;
+	margin-top: 140px;
+
+	h3 {
+		font-weight: 600;
+		font-size: 25px;
+		line-height: 30px;
+		letter-spacing: 0.345em;
+		text-transform: uppercase;
+		color: $white-text;
+	}
+
+	h4 {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		padding-top: 15px;
+		color: $pupure-text;
+	}
+
+	p {
+		padding: 15px;
+		font-size: 15px;
+		line-height: 18px;
+		color: $bone-text;
+	}
+
+	img {
+		margin-top: 40px;
+		width: 95%;
+		height: 170px;
+	}
+}
+
+.skills {
+	& > div {
+		width: 95%;
+		margin: 60px auto;
+		padding: 6px;
+		border-radius: 10px;
+	}
+
+	.ux-ui {
+		background: $green-gradient;
+		h3 {
+			color: $green-text;
+		}
+	}
+
+	.frontend {
+		background: $light-blue-gradient;
+		h3 {
+			color: $light-blue-text;
+		}
+	}
+
+	.backend {
+		background: $purple-gradient;
+		h3 {
+			color: $light-purple-text;
+		}
+	}
+
+	.mobile {
+		background: $red-gradient;
+		h3 {
+			color: $red-text;
+		}
+	}
+
+	.skill-content {
+		background: $main-bg;
+		border-radius: 10px;
+		text-align: center;
+
+		p {
+			font-size: 20px;
+			line-height: 24px;
+			text-align: justify;
+			color: $bone-text;
+			padding: 30px 50px 70px 50px;
+		}
+
+		img {
+			margin: 60px auto 30px auto;
+		}
+
+		h3 {
+			font-weight: 500;
+			font-size: 28px;
+			line-height: 34px;
+		}
+	}
+}
+
+.gearthlogic-experience {
+	margin-top: 100px;
+	padding-left: 10px;
+	padding-right: 10px;
+	h3 {
+		font-weight: bold;
+		font-size: 25px;
+		line-height: 30px;
+		text-align: center;
+		letter-spacing: 0.345em;
+		text-transform: uppercase;
+		color: $white-text;
+	}
+	.proyect {
+		margin-top: 60px;
+		h5 {
+			margin-bottom: 32px;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 25px;
+			line-height: 30px;
+			text-align: center;
+			letter-spacing: 0.245em;
+			text-transform: uppercase;
+			color: $white-text;
+		}
+		h6 {
+			text-align: center;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 24px;
+			color: #8a54de;
+			margin-bottom: 32px;
+		}
+		p {
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 18px;
+			text-align: center;
+			color: $bone-text;
+			margin-bottom: 70px;
+		}
+		.proyect-icon {
+			margin: 0 auto;
+			width: 284.77px;
+			height: 260px;
+			border-radius: 10px;
+			padding: 4px;
+			&.selected-border {
+				background: $purple-gradient;
+			}
+			div {
+				background-color: $bone-text;
+				border-radius: 10px;
+				height: 100%;
+
+				img {
+					height: 170px;
+					width: 190px;
+				}
+			}
+		}
+	}
+}
+
+.previous-work-experience {
+	margin-top: 100px;
+	padding-left: 10px;
+	padding-right: 10px;
+	h3 {
+		font-weight: bold;
+		font-size: 25px;
+		line-height: 30px;
+		text-align: center;
+		letter-spacing: 0.345em;
+		text-transform: uppercase;
+		color: $white-text;
+	}
+
+	div {
+		margin-top: 60px;
+		h5 {
+			margin-bottom: 20px;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 25px;
+			line-height: 30px;
+			text-align: center;
+			letter-spacing: 0.245em;
+			text-transform: uppercase;
+			color: $white-text;
+		}
+		h6 {
+			text-align: center;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 24px;
+			color: #8a54de;
+			margin-bottom: 20px;
+		}
+		p {
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 18px;
+			text-align: center;
+			color: $bone-text;
+			margin-bottom: 70px;
+		}
+	}
+}
+
+.about-me {
+	padding-left: 10px;
+	padding-right: 10px;
+	h3 {
+		font-weight: bold;
+		font-size: 23px;
+		line-height: 30px;
+		letter-spacing: 0.35em;
+		text-transform: uppercase;
+
+		text-align: center;
+		color: $white-text;
+	}
+	h5 {
+		margin-bottom: 20px;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 23px;
+		line-height: 30px;
+		text-align: center;
+		letter-spacing: 0.245em;
+		text-transform: uppercase;
+		color: $white-text;
+	}
+	h6 {
+		text-align: center;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		color: #8a54de;
+		margin-bottom: 20px;
+	}
+	p {
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 18px;
+		text-align: center;
+		color: $bone-text;
+		margin-bottom: 70px;
+	}
+}
+
+.contact-me {
+	margin-top: 120px;
+	margin-bottom: 120px;
+	h3 {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 25px;
+		line-height: 30px;
+		text-align: center;
+		letter-spacing: 0.225em;
+		text-transform: uppercase;
+		color: $white-text;
+		a {
+			color: $red-text;
+			text-decoration: underline;
+		}
+	}
+}
+
+footer {
+	height: 100px;
+	padding: 30px;
+	padding-top: 15px;
+	display: flex;
+	justify-content: space-between;
+	background-color: $grey-400-bg;
+	.left-section {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		h6 {
+			font-family: Work Sans;
+			font-weight: 600;
+			font-size: 15px;
+			line-height: 18px;
+			text-transform: uppercase;
+			color: $white-text;
+		}
+		ul {
+			list-style: none;
+			font-family: Barlow;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			line-height: 14px;
+			text-transform: uppercase;
+
+			color: $white-text;
+		}
+	}
+	.icons {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		img {
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
+}
