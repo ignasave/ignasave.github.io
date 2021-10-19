@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'fonts';
 
 * {
 	padding: 0;
@@ -9,7 +10,7 @@
 body {
 	background-color: $main-bg;
 	color: $bone-text;
-	font-family: 'Barlow', sans-serif;
+	font-family: $barlow-font;
 	font-style: normal;
 }
 
@@ -23,7 +24,7 @@ nav {
 	height: 50px;
 
 	.page-title {
-		font-family: 'Work Sans';
+		font-family: $work-sans-font;
 		font-weight: 600;
 		font-size: 15px;
 		line-height: 18px;
@@ -57,32 +58,25 @@ nav {
 }
 
 header {
-	.hero-title {
+	h1 {
 		width: 230px;
-		margin: 90px auto 30px auto;
-
-		h1 {
-			font-size: 30px;
-			line-height: 36px;
-			text-align: center;
-			letter-spacing: 0.26em;
-			text-transform: uppercase;
-			font-weight: 600;
-		}
+		margin: 120px auto 30px auto;
+		font-size: 30px;
+		line-height: 36px;
+		text-align: center;
+		letter-spacing: 0.26em;
+		text-transform: uppercase;
+		font-weight: 600;
 	}
 
-	.hero-subtitle {
+	h3 {
 		width: 230px;
-		margin: 0 auto 50px auto;
-
-		h3 {
-			font-weight: 600;
-			font-size: 20px;
-			line-height: 24px;
-			text-align: center;
-
-			color: $white-text;
-		}
+		margin: 0 auto 180px auto;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 24px;
+		text-align: center;
+		color: $white-text;
 	}
 
 	.down-indicator {
@@ -93,7 +87,6 @@ header {
 }
 
 .caniya {
-	font-style: normal;
 	text-align: center;
 	margin-top: 140px;
 
@@ -128,6 +121,13 @@ header {
 	}
 }
 
+@mixin skill-option($gradient, $text) {
+	background: $gradient;
+	h3 {
+		color: $text;
+	}
+}
+
 .skills {
 	& > div {
 		width: 95%;
@@ -137,31 +137,19 @@ header {
 	}
 
 	.ux-ui {
-		background: $green-gradient;
-		h3 {
-			color: $green-text;
-		}
+		@include skill-option($green-gradient, $green-text);
 	}
 
 	.frontend {
-		background: $light-blue-gradient;
-		h3 {
-			color: $light-blue-text;
-		}
+		@include skill-option($light-blue-gradient, $light-blue-text);
 	}
 
 	.backend {
-		background: $purple-gradient;
-		h3 {
-			color: $light-purple-text;
-		}
+		@include skill-option($purple-gradient, $light-purple-text);
 	}
 
 	.mobile {
-		background: $red-gradient;
-		h3 {
-			color: $red-text;
-		}
+		@include skill-option($red-gradient, $red-text);
 	}
 
 	.skill-content {
@@ -206,7 +194,7 @@ header {
 		margin-top: 60px;
 		h5 {
 			margin-bottom: 32px;
-			font-style: normal;
+
 			font-weight: 500;
 			font-size: 25px;
 			line-height: 30px;
@@ -220,7 +208,7 @@ header {
 			font-weight: 500;
 			font-size: 20px;
 			line-height: 24px;
-			color: #8a54de;
+			color: $pupure-text;
 			margin-bottom: 32px;
 		}
 		p {
@@ -258,11 +246,11 @@ header {
 	margin-top: 100px;
 	padding-left: 10px;
 	padding-right: 10px;
+	text-align: center;
 	h3 {
 		font-weight: bold;
 		font-size: 25px;
 		line-height: 30px;
-		text-align: center;
 		letter-spacing: 0.345em;
 		text-transform: uppercase;
 		color: $white-text;
@@ -272,28 +260,24 @@ header {
 		margin-top: 60px;
 		h5 {
 			margin-bottom: 20px;
-			font-style: normal;
 			font-weight: 500;
 			font-size: 25px;
 			line-height: 30px;
-			text-align: center;
 			letter-spacing: 0.245em;
 			text-transform: uppercase;
 			color: $white-text;
 		}
 		h6 {
-			text-align: center;
 			font-weight: 500;
 			font-size: 20px;
 			line-height: 24px;
-			color: #8a54de;
+			color: $pupure-text;
 			margin-bottom: 20px;
 		}
 		p {
 			font-weight: 500;
 			font-size: 15px;
 			line-height: 18px;
-			text-align: center;
 			color: $bone-text;
 			margin-bottom: 70px;
 		}
@@ -303,40 +287,35 @@ header {
 .about-me {
 	padding-left: 10px;
 	padding-right: 10px;
+	text-align: center;
 	h3 {
 		font-weight: bold;
 		font-size: 23px;
 		line-height: 30px;
 		letter-spacing: 0.35em;
 		text-transform: uppercase;
-
-		text-align: center;
 		color: $white-text;
 	}
 	h5 {
 		margin-bottom: 20px;
-		font-style: normal;
 		font-weight: 500;
 		font-size: 23px;
 		line-height: 30px;
-		text-align: center;
 		letter-spacing: 0.245em;
 		text-transform: uppercase;
 		color: $white-text;
 	}
 	h6 {
-		text-align: center;
 		font-weight: 500;
 		font-size: 20px;
 		line-height: 24px;
-		color: #8a54de;
+		color: $pupure-text;
 		margin-bottom: 20px;
 	}
 	p {
 		font-weight: 500;
 		font-size: 15px;
 		line-height: 18px;
-		text-align: center;
 		color: $bone-text;
 		margin-bottom: 70px;
 	}
@@ -346,7 +325,6 @@ header {
 	margin-top: 120px;
 	margin-bottom: 120px;
 	h3 {
-		font-style: normal;
 		font-weight: 600;
 		font-size: 25px;
 		line-height: 30px;
@@ -373,7 +351,7 @@ footer {
 		flex-direction: column;
 		justify-content: space-between;
 		h6 {
-			font-family: Work Sans;
+			font-family: $work-sans-font;
 			font-weight: 600;
 			font-size: 15px;
 			line-height: 18px;
@@ -382,8 +360,8 @@ footer {
 		}
 		ul {
 			list-style: none;
-			font-family: Barlow;
-			font-style: normal;
+			font-family: $barlow-font;
+
 			font-weight: normal;
 			font-size: 12px;
 			line-height: 14px;

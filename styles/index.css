@@ -1,6 +1,8 @@
 /* -------------- Background -------------- */
 /* -------------- Text -------------- */
 /* -------------- Gradients -------------- */
+/* -------------- Fonts -------------- */
+/* -------------- Font Stacks -------------- */
 * {
   padding: 0;
   margin: 0;
@@ -11,7 +13,7 @@
 body {
   background-color: #0c0d10;
   color: #f3f4f6;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   font-style: normal;
 }
 
@@ -32,7 +34,7 @@ nav {
 }
 
 nav .page-title {
-  font-family: 'Work Sans';
+  font-family: "Work Sans", sans-serif;
   font-weight: 600;
   font-size: 15px;
   line-height: 18px;
@@ -64,12 +66,9 @@ nav ul li a {
   color: #d7dae0;
 }
 
-header .hero-title {
+header h1 {
   width: 230px;
-  margin: 90px auto 30px auto;
-}
-
-header .hero-title h1 {
+  margin: 120px auto 30px auto;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
@@ -78,12 +77,9 @@ header .hero-title h1 {
   font-weight: 600;
 }
 
-header .hero-subtitle {
+header h3 {
   width: 230px;
-  margin: 0 auto 50px auto;
-}
-
-header .hero-subtitle h3 {
+  margin: 0 auto 180px auto;
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
@@ -104,7 +100,6 @@ header .down-indicator {
 }
 
 .caniya {
-  font-style: normal;
   text-align: center;
   margin-top: 140px;
 }
@@ -224,7 +219,6 @@ header .down-indicator {
 
 .gearthlogic-experience .proyect h5 {
   margin-bottom: 32px;
-  font-style: normal;
   font-weight: 500;
   font-size: 25px;
   line-height: 30px;
@@ -279,13 +273,13 @@ header .down-indicator {
   margin-top: 100px;
   padding-left: 10px;
   padding-right: 10px;
+  text-align: center;
 }
 
 .previous-work-experience h3 {
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
-  text-align: center;
   letter-spacing: 0.345em;
   text-transform: uppercase;
   color: #ffffff;
@@ -297,18 +291,15 @@ header .down-indicator {
 
 .previous-work-experience div h5 {
   margin-bottom: 20px;
-  font-style: normal;
   font-weight: 500;
   font-size: 25px;
   line-height: 30px;
-  text-align: center;
   letter-spacing: 0.245em;
   text-transform: uppercase;
   color: #ffffff;
 }
 
 .previous-work-experience div h6 {
-  text-align: center;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
@@ -320,7 +311,6 @@ header .down-indicator {
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
-  text-align: center;
   color: #f3f4f6;
   margin-bottom: 70px;
 }
@@ -328,6 +318,7 @@ header .down-indicator {
 .about-me {
   padding-left: 10px;
   padding-right: 10px;
+  text-align: center;
 }
 
 .about-me h3 {
@@ -336,24 +327,20 @@ header .down-indicator {
   line-height: 30px;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  text-align: center;
   color: #ffffff;
 }
 
 .about-me h5 {
   margin-bottom: 20px;
-  font-style: normal;
   font-weight: 500;
   font-size: 23px;
   line-height: 30px;
-  text-align: center;
   letter-spacing: 0.245em;
   text-transform: uppercase;
   color: #ffffff;
 }
 
 .about-me h6 {
-  text-align: center;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
@@ -365,7 +352,6 @@ header .down-indicator {
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
-  text-align: center;
   color: #f3f4f6;
   margin-bottom: 70px;
 }
@@ -376,7 +362,6 @@ header .down-indicator {
 }
 
 .contact-me h3 {
-  font-style: normal;
   font-weight: 600;
   font-size: 25px;
   line-height: 30px;
@@ -418,7 +403,7 @@ footer .left-section {
 }
 
 footer .left-section h6 {
-  font-family: Work Sans;
+  font-family: "Work Sans", sans-serif;
   font-weight: 600;
   font-size: 15px;
   line-height: 18px;
@@ -428,8 +413,7 @@ footer .left-section h6 {
 
 footer .left-section ul {
   list-style: none;
-  font-family: Barlow;
-  font-style: normal;
+  font-family: "Barlow", sans-serif;
   font-weight: normal;
   font-size: 12px;
   line-height: 14px;
