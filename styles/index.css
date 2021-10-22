@@ -51,6 +51,7 @@ nav ul {
 
 nav ul li {
   float: left;
+  cursor: pointer;
 }
 
 nav ul li a {
@@ -64,6 +65,10 @@ nav ul li a {
   line-height: 14px;
   letter-spacing: 0.025em;
   color: #d7dae0;
+}
+
+nav ul li:hover {
+  text-decoration: underline;
 }
 
 header h1 {
@@ -301,6 +306,73 @@ header .down-indicator .animated-icon {
 .gearthlogic-experience .proyect .proyect-icon div img {
   height: 170px;
   width: 190px;
+}
+
+.gearthlogic-experience .mobile-side-selector {
+  position: relative;
+}
+
+.gearthlogic-experience .mobile-side-selector .selector-content {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  top: 50px;
+  left: -60px;
+}
+
+.gearthlogic-experience .mobile-side-selector .selector-content div {
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #2c313a;
+  width: 50px;
+  height: 415px;
+  border-bottom-right-radius: 10px;
+}
+
+.gearthlogic-experience .mobile-side-selector .selector-content div img {
+  width: 30px;
+}
+
+.gearthlogic-experience .mobile-side-selector .selector-content button {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background: #495162;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  height: 55px;
+  width: 20px;
+}
+
+.gearthlogic-experience .mobile-side-selector .selector-content button img {
+  content: url("../assets/double-arrow-right.svg");
+}
+
+.gearthlogic-experience .mobile-side-selector .selector-content.open {
+  left: 0 !important;
+}
+
+.gearthlogic-experience .mobile-side-selector .selector-content.open button img {
+  content: url("../assets/double-arrow-left.svg");
 }
 
 .previous-work-experience {
