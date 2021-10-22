@@ -38,7 +38,28 @@
 			<h3>Hello, my name is Ignacio & I’m a fullstack dev</h3>
 
 			<div class="down-indicator">
-				<img src="./assets/indicator.svg" alt="indicator" />
+				<svg xmlns="http://www.w3.org/2000/svg" width="75" height="42" fill="none" viewBox="0 0 75 42">
+					<rect width="20" height="40" x="1" y="1" stroke="#F3F4F6" stroke-linejoin="round" stroke-width="2" rx="10" />
+					<circle class="animated-icon" cx="11" cy="13.4" r="6" fill="#EF4647" />
+					<g>
+						<path
+							stroke="#fff"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-miterlimit="10"
+							stroke-width="4"
+							d="M52.2 29a2.4 2.4 0 100 4.8h8c6.627 0 12-5.373 12-12s-5.373-12-12-12h-6.4a2.4 2.4 0 100 4.8h-1.6a2.4 2.4 0 100 4.8h-1.6a2.4 2.4 0 100 4.8H39.4a2.4 2.4 0 100 4.8h18.4-5.6z"
+						/>
+						<path
+							stroke="#EF4647"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-miterlimit="10"
+							stroke-width="2"
+							d="M41 9v11.2M38.6 17.8l2.4 2.4 2.4-2.4"
+						/>
+					</g>
+				</svg>
 			</div>
 		</header>
 		<main>
@@ -194,5 +215,31 @@
 				</div>
 			</footer>
 		</main>
+
+		<div class="mobile-side-buttons">
+			<div>
+				<img src='./assets/LinkedIN.svg'/>
+				<img src='./assets/Github.svg'/>
+				<img src='./assets/Medium.svg'/>
+				<img src='./assets/WhatsApp.svg'/>
+			</div>
+			<button onclick="onClickMobileSideButton()">
+				<img />
+			</button>
+		</div>
+
+		<script src='./js/index.js'></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"
+			integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"
+			integrity="sha512-DlTk2PLUinhBupE89kHOJTt11QqbRMQVlbb26XVDvp4D1kt0fRvQJslvZnTelRJHq6yK0tIPCR7cul8+9Blz0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
 	</body>
 </html>

@@ -1,0 +1,29 @@
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Large tablets and desktops
+$screen-xxl-min: 2000px;
+
+// Large devices
+@mixin lg {
+	@media (min-width: $screen-lg-min) {
+		@content;
+	}
+}
+
+// Full width page
+@mixin xl {
+	@media (min-width: $screen-xl-min) {
+		@content;
+	}
+}
+
+// Ultra wide
+@mixin xxl {
+	@media (min-width: $screen-xxl-min) {
+		@content;
+	}
+}

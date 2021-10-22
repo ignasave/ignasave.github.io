@@ -99,6 +99,34 @@ header .down-indicator {
           align-items: center;
 }
 
+@-webkit-keyframes animated-icon-anim {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    z-index: 5;
+  }
+  to {
+    -webkit-transform: translate(0, 16px);
+            transform: translate(0, 16px);
+  }
+}
+
+@keyframes animated-icon-anim {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    z-index: 5;
+  }
+  to {
+    -webkit-transform: translate(0, 16px);
+            transform: translate(0, 16px);
+  }
+}
+
+header .down-indicator .animated-icon {
+  animation: animated-icon-anim 0.8s infinite alternate-reverse;
+}
+
 .caniya {
   text-align: center;
   margin-top: 140px;
@@ -126,9 +154,12 @@ header .down-indicator {
   font-size: 15px;
   line-height: 18px;
   color: #f3f4f6;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 .caniya img {
+  max-width: 450px;
   margin-top: 40px;
   width: 95%;
   height: 170px;
@@ -139,6 +170,7 @@ header .down-indicator {
   margin: 60px auto;
   padding: 6px;
   border-radius: 10px;
+  max-width: 450px;
 }
 
 .skills .ux-ui {
@@ -238,6 +270,8 @@ header .down-indicator {
 }
 
 .gearthlogic-experience .proyect p {
+  margin: 0 auto;
+  max-width: 450px;
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
@@ -308,6 +342,8 @@ header .down-indicator {
 }
 
 .previous-work-experience div p {
+  margin: 0 auto;
+  max-width: 450px;
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
@@ -349,6 +385,8 @@ header .down-indicator {
 }
 
 .about-me p {
+  margin: 0 auto;
+  max-width: 450px;
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
@@ -436,5 +474,68 @@ footer .icons {
 footer .icons img {
   padding-left: 5px;
   padding-right: 5px;
+}
+
+.mobile-side-buttons {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  top: 50px;
+  left: -50px;
+}
+
+.mobile-side-buttons div {
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #2c313a;
+  width: 50px;
+  height: 415px;
+  border-bottom-right-radius: 10px;
+}
+
+.mobile-side-buttons div img {
+  width: 30px;
+}
+
+.mobile-side-buttons button {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background: #495162;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  height: 55px;
+  width: 20px;
+}
+
+.mobile-side-buttons button img {
+  content: url("../assets/double-arrow-right.svg");
+}
+
+.mobile-side-buttons.open {
+  left: 0 !important;
+}
+
+.mobile-side-buttons.open button img {
+  content: url("../assets/double-arrow-left.svg");
 }
 /*# sourceMappingURL=index.css.map */
