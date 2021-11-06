@@ -1,0 +1,59 @@
+header {
+	h1 {
+		width: 230px;
+		margin: 120px auto 30px auto;
+		font-size: 30px;
+		line-height: 36px;
+		text-align: center;
+		letter-spacing: 0.26em;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	h3 {
+		width: 230px;
+		margin: 0 auto 180px auto;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 24px;
+		text-align: center;
+		color: $white-text;
+	}
+
+	.down-indicator {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@keyframes animated-icon-anim {
+			from {
+				transform: translate(0, 0);
+				z-index: 5;
+			}
+			to {
+				transform: translate(0, 16px);
+			}
+		}
+		.animated-icon {
+			animation: animated-icon-anim 0.8s infinite alternate-reverse;
+		}
+	}
+
+	@include lg {
+		h1 {
+			font-size: 72px;
+			line-height: 86px;
+			letter-spacing: 0.26em;
+			margin: 330px 0 20px 160px;
+			width: 520px;
+			text-align: left;
+		}
+		h3 {
+			font-size: 36px;
+			line-height: 43px;
+			width: auto;
+			text-align: left;
+			margin-left: 160px;
+			margin-bottom: 180px;
+		}
+	}
+}

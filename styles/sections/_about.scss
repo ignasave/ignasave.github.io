@@ -1,0 +1,75 @@
+.about-me {
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	h3 {
+		font-weight: bold;
+		font-size: 23px;
+		line-height: 30px;
+		letter-spacing: 0.35em;
+		text-transform: uppercase;
+		color: $white-text;
+	}
+	h5 {
+		margin-bottom: 20px;
+		font-weight: 500;
+		font-size: 23px;
+		line-height: 30px;
+		letter-spacing: 0.245em;
+		text-transform: uppercase;
+		color: $white-text;
+	}
+	h6 {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		color: $pupure-text;
+		margin-bottom: 20px;
+	}
+	p {
+		margin: 0 auto;
+		max-width: 450px;
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 18px;
+		color: $bone-text;
+		margin-bottom: 70px;
+	}
+
+	@include lg {
+		margin-top: 203px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		h3 {
+			width: 100%;
+			font-size: 36px;
+			line-height: 43px;
+			letter-spacing: 0.35em;
+		}
+
+		div {
+			margin-left: 160px;
+			width: 50%;
+			align-self: flex-end;
+			text-align: left;
+			h5 {
+				font-size: 38px;
+				line-height: 46px;
+				letter-spacing: 0.345em;
+				font-weight: 600;
+			}
+			h6 {
+				font-size: 28px;
+				line-height: 34px;
+			}
+			p {
+				max-width: 650px;
+				margin: 0;
+				font-size: 20px;
+				line-height: 24px;
+				text-align: justify;
+			}
+		}
+	}
+}

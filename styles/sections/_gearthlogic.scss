@@ -1,0 +1,213 @@
+
+.gearthlogic-experience {
+	margin-top: 100px;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	h3 {
+		font-weight: bold;
+		font-size: 25px;
+		line-height: 30px;
+		text-align: center;
+		letter-spacing: 0.345em;
+		text-transform: uppercase;
+		color: $white-text;
+	}
+	.proyect {
+		display: none;
+		margin-top: 60px;
+		h5 {
+			margin-bottom: 32px;
+
+			font-weight: 500;
+			font-size: 25px;
+			line-height: 30px;
+			text-align: center;
+			letter-spacing: 0.245em;
+			text-transform: uppercase;
+			color: $white-text;
+		}
+		h6 {
+			text-align: center;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 24px;
+			color: $pupure-text;
+			margin-bottom: 32px;
+		}
+		p {
+			margin: 0 auto;
+			max-width: 450px;
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 18px;
+			text-align: center;
+			color: $bone-text;
+			margin-bottom: 70px;
+		}
+		.proyect-icon {
+			margin: 0 auto;
+			width: 254.77px;
+			height: 230px;
+			border-radius: 10px;
+			padding: 4px;
+			&.selected-border {
+				background: $purple-gradient;
+			}
+			div {
+				background-color: $bone-text;
+				border-radius: 10px;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				img {
+					width: 75%;
+				}
+			}
+		}
+
+		&.selected {
+			display: block;
+		}
+	}
+
+	.mobile-side-selector {
+		position: relative;
+		.selector-content {
+			transition: 0.5s ease;
+			display: flex;
+			flex-direction: row;
+			position: absolute;
+			left: -60px;
+
+			div {
+				padding: 50px 0;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-evenly;
+				background-color: #2c313a;
+				width: 50px;
+				height: 415px;
+				border-bottom-right-radius: 10px;
+				button {
+					border: none;
+					box-shadow: none;
+					background-color: transparent;
+					img {
+						width: 30px;
+					}
+				}
+			}
+
+			.open-button {
+				border-top-right-radius: 6px;
+				border-bottom-right-radius: 6px;
+				background: #495162;
+				border: 0;
+				box-shadow: none;
+				height: 55px;
+				width: 20px;
+				img {
+					content: url('../assets/double-arrow-right.svg');
+				}
+			}
+
+			&.open {
+				left: -10px !important;
+				.open-button {
+					img {
+						content: url('../assets/double-arrow-left.svg');
+					}
+				}
+			}
+		}
+	}
+
+	.desktop-selector {
+		display: none;
+	}
+
+	@include lg {
+		.gearth-content-container {
+			display: flex;
+			flex-direction: row;
+			margin-top: 60px;
+		}
+
+		h3 {
+			font-size: 38px;
+			line-height: 46px;
+			letter-spacing: 0.345em;
+		}
+		.mobile-side-selector {
+			display: none;
+		}
+		.desktop-selector {
+			width: 50%;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 40px;
+			.icon {
+				aspect-ratio: 1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: #f3f4f6;
+				border-radius: 10px;
+				&.selected {
+					background: $purple-gradient;
+					border-radius: 10px;
+					padding: 6px;
+					div {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 100%;
+						height: 100%;
+						background-color: #f3f4f6;
+						border-radius: 10px;
+					}
+				}
+				img {
+					width: 160px;
+				}
+			}
+		}
+		.proyect {
+			&.selected {
+				display: flex;
+				flex-direction: row;
+				width: 50%;
+			}
+
+			.content {
+				display: flex;
+				flex-direction: column;
+				margin-left: 160px;
+				h5 {
+					text-align: left;
+					font-size: 38px;
+					line-height: 46px;
+					letter-spacing: 0.245em;
+				}
+				h6 {
+					text-align: left;
+					font-size: 28px;
+					line-height: 34px;
+				}
+				p {
+					font-size: 20px;
+					line-height: 24px;
+					text-align: justify;
+					margin-left: 0;
+					max-width: 650px;
+				}
+			}
+			.proyect-icon {
+				display: none;
+			}
+		}
+	}
+}

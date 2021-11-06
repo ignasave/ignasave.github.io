@@ -1,0 +1,25 @@
+.contact-me {
+	margin-top: 120px;
+	margin-bottom: 120px;
+	h3 {
+		font-weight: 600;
+		font-size: 25px;
+		line-height: 30px;
+		text-align: center;
+		letter-spacing: 0.225em;
+		text-transform: uppercase;
+		color: $white-text;
+		a {
+			color: $red-text;
+			text-decoration: underline;
+		}
+	}
+
+	@include lg {
+		h3{
+			font-size: 36px;
+			line-height: 43px;
+			letter-spacing: 0.27em;
+		}
+	}
+}

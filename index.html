@@ -34,12 +34,32 @@
 			</ul>
 		</nav>
 		<header>
+			<div class="mobile-side-buttons">
+				<div>
+					<img src="./assets/LinkedIN.svg" />
+					<img src="./assets/Github.svg" />
+					<img src="./assets/Medium.svg" />
+					<img src="./assets/WhatsApp.svg" />
+				</div>
+				<button onclick="onClickMobileSideButton()" aria-label="open side social network menu">
+					<img />
+				</button>
+			</div>
 			<h1>Crafting beautiful ideas</h1>
 			<h3>Hello, my name is Ignacio & I’m a fullstack dev</h3>
 
 			<div class="down-indicator">
 				<svg xmlns="http://www.w3.org/2000/svg" width="75" height="42" fill="none" viewBox="0 0 75 42">
-					<rect width="20" height="40" x="1" y="1" stroke="#F3F4F6" stroke-linejoin="round" stroke-width="2" rx="10" />
+					<rect
+						width="20"
+						height="40"
+						x="1"
+						y="1"
+						stroke="#F3F4F6"
+						stroke-linejoin="round"
+						stroke-width="2"
+						rx="10"
+					/>
 					<circle class="animated-icon" cx="11" cy="13.4" r="6" fill="#EF4647" />
 					<g>
 						<path
@@ -64,15 +84,18 @@
 		</header>
 		<main>
 			<section class="caniya">
-				<h3>CANI-YA APP</h3>
-				<h4>Fullstack Development</h4>
-				<p>
-					Cani-Ya is a Progressive Web Application that comes to revolutionize the way kiosks are worked, focused on the newspaper
-					kiosk business, it is a modularized application that has functionalities such as Inventory, Dynamic Sales Management,
-					Delivery of merchandise with a map of the route to take integrated into the application, Alerts for the return of the
-					merchandise and many more functionalities. With more than 3 years of development and several people financing its
-					launch, it is my most important project.
-				</p>
+				<div>
+					<h3>CANI-YA APP</h3>
+					<h4>Fullstack Development</h4>
+					<p>
+						Cani-Ya is a Progressive Web Application that comes to revolutionize the way kiosks are worked,
+						focused on the newspaper kiosk business, it is a modularized application that has
+						functionalities such as Inventory, Dynamic Sales Management, Delivery of merchandise with a map
+						of the route to take integrated into the application, Alerts for the return of the merchandise
+						and many more functionalities. With more than 3 years of development and several people
+						financing its launch, it is my most important project.
+					</p>
+				</div>
 				<img src="./assets/caniya-thumb2.png" />
 			</section>
 
@@ -82,9 +105,9 @@
 						<img src="./assets/ux-ui-icon.svg" />
 						<h3>UI-UX DESIGN</h3>
 						<p>
-							With more than 7 years of experience creating user interfaces, and working on the image of several companies and
-							applications internationally, I’m experienced in: Figma, Adobe XD, Adobe Illustrator, Adobe Photoshop, and
-							others.
+							With more than 7 years of experience creating user interfaces, and working on the image of
+							several companies and applications internationally, I’m experienced in: Figma, Adobe XD,
+							Adobe Illustrator, Adobe Photoshop, and others.
 						</p>
 					</div>
 				</div>
@@ -94,9 +117,9 @@
 						<img src="./assets/icon.svg" />
 						<h3>FRONTEND DEV</h3>
 						<p>
-							From reusable components to 3D animations, Integrations with various services and the practice to carry out
-							almost any project that is needed, i'm specialized in ReactJS I'm experienced in: HTML, CSS, SASS, JavaScript,
-							ES2021, Typescript, ReactJS, and others.
+							From reusable components to 3D animations, Integrations with various services and the
+							practice to carry out almost any project that is needed, i'm specialized in ReactJS I'm
+							experienced in: HTML, CSS, SASS, JavaScript, ES2021, Typescript, ReactJS, and others.
 						</p>
 					</div>
 				</div>
@@ -106,8 +129,9 @@
 						<img src="./assets/backend.svg" />
 						<h3>BACKEND DEV</h3>
 						<p>
-							Databases, Algorithms, Recursion, APIS, and much more, Proud to have won 2 programming olympics in Buenos Aires.
-							I'm experienced in: C, C ++, Java, Node JS, PHP, Laravel, SQL, FireBase and others.
+							Databases, Algorithms, Recursion, APIS, and much more, Proud to have won 2 programming
+							olympics in Buenos Aires. I'm experienced in: C, C ++, Java, Node JS, PHP, Laravel, SQL,
+							FireBase and others.
 						</p>
 					</div>
 				</div>
@@ -117,8 +141,9 @@
 						<img src="./assets/smartphone.svg" />
 						<h3>MOBILE</h3>
 						<p>
-							To develop system applications, 2D games, Integration with maps, Firebase, notifications, all in native
-							applications or progressive web, Mainly experienced in React Native and Expo in both Android and iOS
+							To develop system applications, 2D games, Integration with maps, Firebase, notifications,
+							all in native applications or progressive web, Mainly experienced in React Native and Expo
+							in both Android and iOS
 						</p>
 					</div>
 				</div>
@@ -126,84 +151,212 @@
 
 			<section class="gearthlogic-experience">
 				<h3>THE GEARTHLOGIC EXPERIENCE</h3>
-
-				<div class="proyect">
-					<h5>CRYPTO-IMPERIUM</h5>
-					<h6>Front-End Development</h6>
-					<p>
-						Crypto imperium is a web application that has two systems: the system for administrators and the system for
-						customers and sellers, managing statistics, graphs, jwt, investments, calculations for finances, Made with ReactJS,
-						Redux, Notifications in Firebase, Material-UI and more. A large project with a good foundation and fair structure
-						for a cryptocurrency investment and finance application.
-					</p>
-					<div class="proyect-icon selected-border">
-						<div>
-							<img />
+				<div class="gearth-content-container">
+					<div class="mobile-side-selector">
+						<div class="selector-content">
+							<div>
+								<button onclick="onChangeProject('crypto')" aria-label="view crypto imperium project">
+									<img src="./assets/crypto.png" />
+								</button>
+								<button onclick="onChangeProject('afull')" aria-label="view github project">
+									<img src="./assets/afull.png" />
+								</button>
+								<button onclick="onChangeProject('tuprof')" aria-label="view tuprofesionalya project">
+									<img src="./assets/Medium.svg" />
+								</button>
+								<button onclick="onChangeProject('nfood')" aria-label="view nfood project">
+									<img src="./assets/WhatsApp.svg" />
+								</button>
+							</div>
+							<button class="open-button" onclick="onClickMobileSideSelectorButton()">
+								<img />
+							</button>
 						</div>
 					</div>
-				</div>
-				<div class="mobile-side-selector">
-					<div>
-						<img src='./assets/LinkedIN.svg'/>
-						<img src='./assets/Github.svg'/>
-						<img src='./assets/Medium.svg'/>
-						<img src='./assets/WhatsApp.svg'/>
+					<div class="proyect selected" id="crypto">
+						<div class="content">
+							<h5>CRYPTO-IMPERIUM</h5>
+							<h6>Front-End Development</h6>
+							<p>
+								Crypto imperium is a web application that has two systems: the system for administrators
+								and the system for customers and sellers, managing statistics, graphs, jwt, investments,
+								calculations for finances, Made with ReactJS, Redux, Notifications in Firebase,
+								Material-UI and more. A large project with a good foundation and fair structure for a
+								cryptocurrency investment and finance application.
+							</p>
+						</div>
+						<div class="proyect-icon selected-border">
+							<div>
+								<img src="./assets/crypto.png" />
+							</div>
+						</div>
 					</div>
-					<button onclick="onClickMobileSideButton()">
-						<img />
-					</button>
+					<div class="proyect" id="afull">
+						<h5>AFULL</h5>
+						<h6>FullStack Mobile Development</h6>
+						<p>
+							Afull is a mobile application for android and ios for those who are dedicated to doing
+							dropshipping in Mexico, with a modernized design, and builded with React Native, Expo,
+							Firebase Cloud Messaging, Notifications, download images, share on social networks and much
+							more, the products They are brought from shopify and it connects with payments through
+							goaffpro. It is a complete application for an international client and that is already
+							available in the android play store.
+						</p>
+						<div class="proyect-icon selected-border">
+							<div>
+								<img src="./assets/crypto-imperium-logo.png" />
+							</div>
+						</div>
+					</div>
+					<div class="proyect" id="tuprof">
+						<h5>TU PROFESIONAL YA</h5>
+						<h6>Front-End Development</h6>
+						<p>
+							TuProfesionalYa is a platform that will help you find the professional you need, or find
+							clients. Managing the consultation, the steps of the work, the budget, all connected with
+							Mercado Pago to manage the transactions. Working with ReactJS, Embebed Mercado Pago, Redux,
+							React Agenda, Notifications and more.
+						</p>
+						<div class="proyect-icon selected-border">
+							<div>
+								<img src="./assets/crypto-imperium-logo.png" />
+							</div>
+						</div>
+					</div>
+					<div class="proyect" id="nfood">
+						<h5>NFood</h5>
+						<h6>Front-End Development</h6>
+						<p>
+							NFood is a platform that integrates all the necessary systems to have a fully digitized
+							Restaurant, both on the side of customers, waiters, cooks, restaurant managers and
+							administrators. The application is made with ReactJS
+						</p>
+						<div class="proyect-icon selected-border">
+							<div>
+								<img src="./assets/crypto-imperium-logo.png" />
+							</div>
+						</div>
+					</div>
+					<div class="proyect" id="smart">
+						<h5>SMARTZONE</h5>
+						<h6>Front-End Development</h6>
+						<p>
+							Smartzone is a platform that allows people who are in a common place to connect, be it a
+							bar, a disco, a beach or a university. They can chat, connect to rooms, and receive all
+							kinds of information about the smartzone. The smartzone administrators have metrics and
+							statistics of their area, a detail with the profiles of the person who comes to the place
+							and can generate publications that customers will see. The application is built on React,
+							Redux, Firebase and more.
+						</p>
+						<div class="proyect-icon selected-border">
+							<div>
+								<img src="./assets/crypto-imperium-logo.png" />
+							</div>
+						</div>
+					</div>
+					<div class="desktop-selector">
+						<div class="icon selected">
+							<div>
+								<img src="./assets/crypto.png" />
+							</div>
+						</div>
+						<div class="icon">
+							<div>
+								<img src="./assets/afull.png" />
+							</div>
+						</div>
+						<div class="icon">
+							<div>
+								<img src="./assets/tuprof.png" />
+							</div>
+						</div>
+						<div class="icon">
+							<div>
+								<img src="./assets/smart.png" />
+							</div>
+						</div>
+						<div class="icon">
+							<div>
+								<img src="./assets/long.png" />
+							</div>
+						</div>
+						<div class="icon">
+							<div>
+								<img src="./assets/ssgboard.png" />
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
 			<section class="previous-work-experience">
 				<h3>PREVIOUS WORK EXPERIENCE</h3>
-				<div>
-					<h5>Exactian</h5>
-					<h6>
-						Fullstack Development & <br />
-						Technical Support
-					</h6>
-					<p>
-						Exactian is an cloud-based platform that provides the best technology applied to Supplier Management, integrating
-						the entire control process in a single platform. Working Time: 01-2020 to 02-2021. My Tasks: Develop new
-						functionalities, mantain the platform which includes debugging, client attention and tecnical problems solving, I
-						was responsible for the client databases, that requires a lot of MySql and algorithm knwoledge being so hugh amounts
-						of important information for international level clients. Here i learnt a lot of things! The Stack: MySql, PHP,
-						complex MVC, jquery, varous css precompilers, AWS, Cronjobs, constant app deployment, etc.
-					</p>
-					<img />
-				</div>
-				<div>
-					<h5>tarot absalon</h5>
-					<h6>Mobile Development</h6>
-					<p>
-						Tarot Absalon is a Mobile App for Android, that embarc the user into the mystic of the Tarot magic, beign able to
-						reveal the cards that will afect the consultant on diferent periods of their future with diverse options. The app is
-						made with React Native and Expo. Working Time: 01-2021 to 03-2020
-					</p>
-					<img />
-				</div>
+				<article>
+					<div>
+						<h5>Exactian</h5>
+						<h6>
+							Fullstack Development & <br />
+							Technical Support
+						</h6>
+						<p>
+							Exactian is an cloud-based platform that provides the best technology applied to Supplier
+							Management, integrating the entire control process in a single platform.<br /><br />
+
+							<span>My Tasks </span>: Develop new functionalities, mantain the platform which includes
+							debugging, client attention and tecnical problems solving, I was responsible for the client
+							databases, that requires a lot of MySql and algorithm knwoledge being so hugh amounts of
+							important information for international level clients. Here i learnt a lot of things!
+							<br /><br />
+							<span>The Stack</span>: MySql, PHP, complex MVC, jquery, varous css precompilers, AWS,
+							Cronjobs, constant app deployment, etc.
+						</p>
+						<span class="working-time">Working Time 🕒: 01-2020 to 02-2021.</span>
+					</div>
+
+					<img src="./assets/exactian-thumb.png" />
+				</article>
+				<article>
+					<div>
+						<h5>tarot absalon</h5>
+						<h6>Mobile Development</h6>
+						<p>
+							Tarot Absalon is a Mobile App for Android, that embarc the user into the mystic of the Tarot
+							magic, beign able to reveal the cards that will afect the consultant on diferent periods of
+							their future with diverse options. <br />
+							<br />
+							The app is made with React Native and Expo.
+							<!-- Aca falta llenar info -->
+						</p>
+						<span class="working-time">Working Time 🕒: 01-2021 to 03-2020.</span>
+					</div>
+
+					<img src="./assets/tarot-absalon.png" />
+				</article>
 			</section>
 
 			<section class="about-me">
 				<h3>A LITTLE ABOUT ME</h3>
-
-				<h5>a billingual fullstack dev</h5>
-				<h6>Fullstack Development</h6>
-				<p>
-					I love Programming and I have been a Programmer since I was 15 years old, I attended a technical college, where I
-					participated in 2 programming Olympics in which I went to the provincial stage (Buenos Aires) and also participated in
-					an Arduino Olympiad at the provincial level and received me from Technician in Personal and Professional Informatics,
-					Then I attended 2 Internships in the development company Avalith, where I trained in development work, and learned from
-					senior developers Reactjs, then I spent 1 year doing various projects and training my frontend skills, this was the year
-					where I’d conceived CaniYA !. After this year I joined Exactian as a fullstack developer, and almost simultaneously I
-					was able to work overtime as a frontend at my current Gearthlogic job. During all these years I had the opportunity to
-					see, learn and work with many technologies and languages, the latest addition to the list being the Java language. that
-					I learned it in my second year of the Systems Engineering career. But of all these technologies the one that I like the
-					most and I feel comfortable with is JavaScript. I am someone who does not stop learning, and I am someone who wants to
-					spend as much time as possible studying new things or doing interesting projects. If you have a project and you need
-					someone to carry it out, I am the right person!
-				</p>
+				<div>
+					<h5>a billingual fullstack dev</h5>
+					<h6>Fullstack Development</h6>
+					<p>
+						I love Programming and I have been a Programmer since I was 15 years old, I attended a technical
+						college, where I participated in 2 programming Olympics in which I went to the provincial stage
+						(Buenos Aires) and also participated in an Arduino Olympiad at the provincial level and received me
+						from Technician in Personal and Professional Informatics, Then I attended 2 Internships in the
+						development company Avalith, where I trained in development work, and learned from senior developers
+						Reactjs, then I spent 1 year doing various projects and training my frontend skills, this was the
+						year where I’d conceived CaniYA !. <br/>
+						 After this year I joined Exactian as a fullstack developer, and
+						almost simultaneously I was able to work overtime as a frontend at my current Gearthlogic job. <br/>
+						During all these years I had the opportunity to see, learn and work with many technologies and
+						languages, the latest addition to the list being the Java language. that I learned it in my second
+						year of the Systems Engineering career. But of all these technologies the one that I like the most
+						and I feel comfortable with is JavaScript. I am someone who does not stop learning, and I am someone
+						who wants to spend as much time as possible studying new things or doing interesting projects. If
+						you have a project and you need someone to carry it out, I am the right person!
+					</p>
+				</div>
 			</section>
 
 			<section class="contact-me">
@@ -227,19 +380,7 @@
 			</footer>
 		</main>
 
-		<div class="mobile-side-buttons">
-			<div>
-				<img src='./assets/LinkedIN.svg'/>
-				<img src='./assets/Github.svg'/>
-				<img src='./assets/Medium.svg'/>
-				<img src='./assets/WhatsApp.svg'/>
-			</div>
-			<button onclick="onClickMobileSideButton()">
-				<img />
-			</button>
-		</div>
-
-		<script src='./js/index.js'></script>
+		<script src="./js/index.js"></script>
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"
 			integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg=="

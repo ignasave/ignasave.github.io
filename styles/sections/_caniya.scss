@@ -1,0 +1,76 @@
+.caniya {
+	text-align: center;
+	margin-top: 140px;
+
+	h3 {
+		font-weight: 600;
+		font-size: 25px;
+		line-height: 30px;
+		letter-spacing: 0.345em;
+		text-transform: uppercase;
+		color: $white-text;
+	}
+
+	h4 {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		padding-top: 15px;
+		color: $pupure-text;
+	}
+
+	p {
+		padding: 15px;
+		font-size: 15px;
+		line-height: 18px;
+		color: $bone-text;
+		max-width: 450px;
+		margin: 0 auto;
+	}
+
+	img {
+		max-width: 450px;
+		margin-top: 40px;
+		width: 95%;
+		height: 170px;
+	}
+
+	@include lg {
+		margin-top: 250px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		div {
+			text-align: left;
+			width: 50%;
+			height: 100%;
+			margin-left: 160px;
+
+			h3 {
+				font-size: 38px;
+				line-height: 46px;
+				letter-spacing: 0.345em;
+			}
+
+			h4 {
+				font-size: 28px;
+				line-height: 34px;
+			}
+
+			p {
+				max-width: 650px;
+				font-size: 20px;
+				line-height: 24px;
+				text-align: justify;
+				margin: 0;
+				padding: 0;
+				padding-top: 14px;
+			}
+		}
+		img {
+			max-width: 910px;
+			height: 400px;
+			margin-top: 0;
+		}
+	}
+}
