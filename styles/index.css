@@ -6,14 +6,21 @@
 /* -------------- Font Stacks -------------- */
 /*--------- Navigation ---------*/
 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-left: 17px;
   padding-right: 10px;
   background-color: #495162;
   height: 50px;
 }
+
 nav .page-title {
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
@@ -22,16 +29,19 @@ nav .page-title {
   text-transform: uppercase;
   color: #ffffff;
 }
+
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
+
 nav ul li {
   float: left;
   cursor: pointer;
 }
+
 nav ul li a {
   display: block;
   text-align: center;
@@ -44,9 +54,11 @@ nav ul li a {
   letter-spacing: 0.025em;
   color: #d7dae0;
 }
+
 nav ul li:hover {
   text-decoration: underline;
 }
+
 @media (min-width: 992px) {
   nav {
     padding-left: 70px;
@@ -70,15 +82,28 @@ footer {
   height: 100px;
   padding: 30px;
   padding-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #495162;
 }
+
 footer .left-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 footer .left-section h6 {
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
@@ -87,6 +112,7 @@ footer .left-section h6 {
   text-transform: uppercase;
   color: #ffffff;
 }
+
 footer .left-section ul {
   list-style: none;
   font-family: "Barlow", sans-serif;
@@ -96,21 +122,32 @@ footer .left-section ul {
   text-transform: uppercase;
   color: #ffffff;
 }
+
 footer .left-section ul li a {
   color: #ffffff;
 }
+
 footer .left-section ul li a:hover {
   text-decoration: underline;
 }
+
 footer .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
+
 footer .icons img {
   padding-left: 5px;
   padding-right: 5px;
 }
+
 @media (min-width: 992px) {
   footer {
     padding: 0;
@@ -118,8 +155,13 @@ footer .icons img {
     padding-right: 140px;
   }
   footer .left-section {
-    align-items: center;
-    flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   footer .left-section h6 {
     font-size: 30px;
@@ -135,12 +177,15 @@ footer .icons img {
     padding-bottom: 10px;
   }
   footer .icons {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   footer .icons img {
     width: 40px;
     height: 40px;
-    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
   }
   footer .icons img:hover {
     width: 50px;
@@ -149,46 +194,69 @@ footer .icons img {
 }
 
 .mobile-side-buttons {
+  -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   position: absolute;
   top: 50px;
   left: -50px;
   height: 100%;
 }
+
 .mobile-side-buttons div {
   padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   background-color: #2c313a;
   width: 50px;
   height: 415px;
   border-bottom-right-radius: 10px;
 }
+
 .mobile-side-buttons div img {
   width: 30px;
 }
+
 .mobile-side-buttons button {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   background: #495162;
   border: 0;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   height: 55px;
   width: 20px;
 }
+
 .mobile-side-buttons button img {
   content: url("../assets/double-arrow-right.svg");
 }
+
 .mobile-side-buttons.open {
   left: 0 !important;
 }
+
 .mobile-side-buttons.open button img {
   content: url("../assets/double-arrow-left.svg");
 }
+
 @media (min-width: 992px) {
   .mobile-side-buttons {
     top: 90px;
@@ -198,7 +266,9 @@ footer .icons img {
     width: 70px;
     height: 100%;
     border-bottom-right-radius: 0;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     padding-top: 37.5px;
   }
   .mobile-side-buttons div img {
@@ -222,6 +292,7 @@ header h1 {
   text-transform: uppercase;
   font-weight: 600;
 }
+
 header h3 {
   width: 230px;
   margin: 0 auto 180px auto;
@@ -231,34 +302,52 @@ header h3 {
   text-align: center;
   color: #ffffff;
 }
+
 header .down-indicator {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 @-webkit-keyframes animated-icon-anim {
   from {
-    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
     z-index: 5;
   }
   to {
-    transform: translate(0, 16px);
+    -webkit-transform: translate(0, 16px);
+            transform: translate(0, 16px);
   }
 }
+
 @keyframes animated-icon-anim {
   from {
-    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
     z-index: 5;
   }
   to {
-    transform: translate(0, 16px);
+    -webkit-transform: translate(0, 16px);
+            transform: translate(0, 16px);
   }
 }
+
 header .down-indicator .animated-icon {
   animation: animated-icon-anim 0.8s infinite alternate-reverse;
 }
+
 @media (min-width: 992px) {
-  header h1 {
+  header .titles {
+    width: 50%;
+  }
+  header .titles h1 {
     font-size: 72px;
     line-height: 86px;
     letter-spacing: 0.26em;
@@ -266,12 +355,44 @@ header .down-indicator .animated-icon {
     width: 520px;
     text-align: left;
   }
-  header h3 {
-    font-size: 36px;
+  header .titles h3 {
+    font-size: 34px;
     line-height: 43px;
-    width: auto;
+    width: 100%;
     text-align: left;
     margin-left: 160px;
+  }
+  header .whole-hero {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .hero {
+    background-color: #2C313A;
+    width: 50%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 }
 
@@ -279,6 +400,7 @@ header .down-indicator .animated-icon {
   text-align: center;
   margin-top: 140px;
 }
+
 .caniya h3 {
   font-weight: 600;
   font-size: 25px;
@@ -287,6 +409,7 @@ header .down-indicator .animated-icon {
   text-transform: uppercase;
   color: #ffffff;
 }
+
 .caniya h4 {
   font-weight: 500;
   font-size: 20px;
@@ -294,6 +417,7 @@ header .down-indicator .animated-icon {
   padding-top: 15px;
   color: #8a54de;
 }
+
 .caniya p {
   padding: 15px;
   font-size: 15px;
@@ -302,18 +426,26 @@ header .down-indicator .animated-icon {
   max-width: 450px;
   margin: 0 auto;
 }
+
 .caniya img {
   max-width: 450px;
   margin-top: 40px;
   width: 95%;
   height: 170px;
 }
+
 @media (min-width: 992px) {
   .caniya {
     margin-top: 250px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .caniya div {
     text-align: left;
@@ -353,36 +485,46 @@ header .down-indicator .animated-icon {
   border-radius: 10px;
   max-width: 450px;
 }
+
 .skills .ux-ui {
   background: linear-gradient(153.49deg, rgba(30, 215, 96, 0.68) 0%, rgba(51, 56, 214, 0.8) 98.94%);
 }
+
 .skills .ux-ui h3 {
   color: #1ed760;
 }
+
 .skills .frontend {
   background: linear-gradient(153.85deg, rgba(46, 240, 210, 0.68) 0%, rgba(51, 56, 214, 0.8) 100%);
 }
+
 .skills .frontend h3 {
   color: #2ef0d2;
 }
+
 .skills .backend {
   background: linear-gradient(153.85deg, rgba(213, 95, 222, 0.68) 0%, rgba(51, 56, 214, 0.8) 100%);
 }
+
 .skills .backend h3 {
   color: #d55fde;
 }
+
 .skills .mobile {
   background: linear-gradient(153.85deg, rgba(239, 70, 71, 0.68) 0%, rgba(51, 56, 214, 0.8) 100%);
 }
+
 .skills .mobile h3 {
   color: #ef4647;
 }
+
 .skills .skill-content {
   background: #0c0d10;
   border-radius: 10px;
   text-align: center;
   height: 100%;
 }
+
 .skills .skill-content p {
   font-size: 20px;
   line-height: 24px;
@@ -390,19 +532,29 @@ header .down-indicator .animated-icon {
   color: #f3f4f6;
   padding: 30px 50px 70px 50px;
 }
+
 .skills .skill-content img {
   margin: 60px auto 30px auto;
 }
+
 .skills .skill-content h3 {
   font-weight: 500;
   font-size: 28px;
   line-height: 34px;
 }
+
 @media (min-width: 992px) {
   .skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-top: 180px;
   }
   .skills > div {
@@ -418,6 +570,7 @@ header .down-indicator .animated-icon {
   padding-left: 10px;
   padding-right: 10px;
 }
+
 .gearthlogic-experience h3 {
   font-weight: bold;
   font-size: 25px;
@@ -427,10 +580,12 @@ header .down-indicator .animated-icon {
   text-transform: uppercase;
   color: #ffffff;
 }
+
 .gearthlogic-experience .proyect {
   display: none;
   margin-top: 60px;
 }
+
 .gearthlogic-experience .proyect h5 {
   margin-bottom: 32px;
   font-weight: 500;
@@ -441,6 +596,7 @@ header .down-indicator .animated-icon {
   text-transform: uppercase;
   color: #ffffff;
 }
+
 .gearthlogic-experience .proyect h6 {
   text-align: center;
   font-weight: 500;
@@ -449,6 +605,7 @@ header .down-indicator .animated-icon {
   color: #8a54de;
   margin-bottom: 32px;
 }
+
 .gearthlogic-experience .proyect p {
   margin: 0 auto;
   max-width: 450px;
@@ -459,6 +616,7 @@ header .down-indicator .animated-icon {
   color: #f3f4f6;
   margin-bottom: 70px;
 }
+
 .gearthlogic-experience .proyect .proyect-icon {
   margin: 0 auto;
   width: 254.77px;
@@ -466,77 +624,120 @@ header .down-indicator .animated-icon {
   border-radius: 10px;
   padding: 4px;
 }
+
 .gearthlogic-experience .proyect .proyect-icon.selected-border {
   background: linear-gradient(153.85deg, rgba(213, 95, 222, 0.68) 0%, rgba(51, 56, 214, 0.8) 100%);
 }
+
 .gearthlogic-experience .proyect .proyect-icon div {
   background-color: #f3f4f6;
   border-radius: 10px;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .gearthlogic-experience .proyect .proyect-icon div img {
   width: 75%;
 }
+
 .gearthlogic-experience .proyect.selected {
   display: block;
 }
+
 .gearthlogic-experience .mobile-side-selector {
   position: relative;
 }
+
 .gearthlogic-experience .mobile-side-selector .selector-content {
+  -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   position: absolute;
   left: -60px;
 }
+
 .gearthlogic-experience .mobile-side-selector .selector-content div {
   padding: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   background-color: #2c313a;
   width: 50px;
   height: 415px;
   border-bottom-right-radius: 10px;
 }
+
 .gearthlogic-experience .mobile-side-selector .selector-content div button {
   border: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background-color: transparent;
 }
+
 .gearthlogic-experience .mobile-side-selector .selector-content div button img {
   width: 30px;
 }
+
 .gearthlogic-experience .mobile-side-selector .selector-content .open-button {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   background: #495162;
   border: 0;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   height: 55px;
   width: 20px;
 }
+
 .gearthlogic-experience .mobile-side-selector .selector-content .open-button img {
   content: url("../assets/double-arrow-right.svg");
 }
+
 .gearthlogic-experience .mobile-side-selector .selector-content.open {
   left: -10px !important;
 }
+
 .gearthlogic-experience .mobile-side-selector .selector-content.open .open-button img {
   content: url("../assets/double-arrow-left.svg");
 }
+
 .gearthlogic-experience .desktop-selector {
   display: none;
 }
+
 @media (min-width: 992px) {
   .gearthlogic-experience .gearth-content-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     margin-top: 60px;
   }
   .gearthlogic-experience h3 {
@@ -549,15 +750,23 @@ header .down-indicator .animated-icon {
   }
   .gearthlogic-experience .desktop-selector {
     width: 50%;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
   }
   .gearthlogic-experience .desktop-selector .icon {
     aspect-ratio: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: #f3f4f6;
     border-radius: 10px;
   }
@@ -567,9 +776,15 @@ header .down-indicator .animated-icon {
     padding: 6px;
   }
   .gearthlogic-experience .desktop-selector .icon.selected div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     height: 100%;
     background-color: #f3f4f6;
@@ -579,13 +794,23 @@ header .down-indicator .animated-icon {
     width: 160px;
   }
   .gearthlogic-experience .proyect.selected {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     width: 50%;
   }
   .gearthlogic-experience .proyect .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-left: 160px;
   }
   .gearthlogic-experience .proyect .content h5 {
@@ -617,6 +842,7 @@ header .down-indicator .animated-icon {
   padding-right: 10px;
   text-align: center;
 }
+
 .previous-work-experience h3 {
   font-weight: bold;
   font-size: 25px;
@@ -625,9 +851,11 @@ header .down-indicator .animated-icon {
   text-transform: uppercase;
   color: #ffffff;
 }
+
 .previous-work-experience article {
   margin-top: 60px;
 }
+
 .previous-work-experience article h5 {
   margin-bottom: 20px;
   font-weight: 500;
@@ -637,6 +865,7 @@ header .down-indicator .animated-icon {
   text-transform: uppercase;
   color: #ffffff;
 }
+
 .previous-work-experience article h6 {
   font-weight: 500;
   font-size: 20px;
@@ -644,6 +873,7 @@ header .down-indicator .animated-icon {
   color: #8a54de;
   margin-bottom: 20px;
 }
+
 .previous-work-experience article p {
   margin: 0 auto;
   max-width: 450px;
@@ -653,15 +883,18 @@ header .down-indicator .animated-icon {
   color: #f3f4f6;
   margin-bottom: 10px;
 }
+
 .previous-work-experience article p span {
   text-decoration: underline;
 }
+
 .previous-work-experience article img {
   max-width: 450px;
   margin-top: 40px;
   width: 95%;
   height: 170px;
 }
+
 @media (min-width: 992px) {
   .previous-work-experience h3 {
     font-size: 38px;
@@ -669,14 +902,28 @@ header .down-indicator .animated-icon {
     letter-spacing: 0.345em;
   }
   .previous-work-experience article {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .previous-work-experience article div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 50%;
     margin-left: 160px;
   }
@@ -717,6 +964,7 @@ header .down-indicator .animated-icon {
   margin-top: 120px;
   margin-bottom: 120px;
 }
+
 .contact-me h3 {
   font-weight: 600;
   font-size: 25px;
@@ -726,13 +974,16 @@ header .down-indicator .animated-icon {
   text-transform: uppercase;
   color: #ffffff;
 }
+
 .contact-me h3 a {
   color: #ef4647;
   text-decoration: underline;
 }
+
 .contact-me h3 a:hover {
   text-decoration: none;
 }
+
 @media (min-width: 992px) {
   .contact-me h3 {
     font-size: 36px;
@@ -746,6 +997,7 @@ header .down-indicator .animated-icon {
   padding-right: 10px;
   text-align: center;
 }
+
 .about-me h3 {
   font-weight: bold;
   font-size: 23px;
@@ -754,6 +1006,7 @@ header .down-indicator .animated-icon {
   text-transform: uppercase;
   color: #ffffff;
 }
+
 .about-me h5 {
   margin-bottom: 20px;
   font-weight: 500;
@@ -763,6 +1016,7 @@ header .down-indicator .animated-icon {
   text-transform: uppercase;
   color: #ffffff;
 }
+
 .about-me h6 {
   font-weight: 500;
   font-size: 20px;
@@ -770,6 +1024,7 @@ header .down-indicator .animated-icon {
   color: #8a54de;
   margin-bottom: 20px;
 }
+
 .about-me p {
   margin: 0 auto;
   max-width: 450px;
@@ -779,12 +1034,19 @@ header .down-indicator .animated-icon {
   color: #f3f4f6;
   margin-bottom: 70px;
 }
+
 @media (min-width: 992px) {
   .about-me {
     margin-top: 203px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .about-me h3 {
     width: 100%;
@@ -795,7 +1057,8 @@ header .down-indicator .animated-icon {
   .about-me div {
     margin-left: 160px;
     width: 50%;
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     text-align: left;
   }
   .about-me div h5 {
@@ -820,7 +1083,8 @@ header .down-indicator .animated-icon {
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -837,21 +1101,4 @@ body {
 a {
   cursor: pointer;
 }
-
-.whole-hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.hero {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=index.css.map */
