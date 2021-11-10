@@ -29,6 +29,7 @@ footer {
 			color: $white-text;
 			li {
 				a {
+					text-decoration: none;
 					color: $white-text;
 					&:hover {
 						text-decoration: underline;
@@ -47,7 +48,7 @@ footer {
 		}
 	}
 
-	@include lg {
+	@include xl {
 		padding: 0;
 		padding-left: 160px;
 		padding-right: 140px;

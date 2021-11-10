@@ -129,7 +129,7 @@
 		display: none;
 	}
 
-	@include lg {
+	@include xl {
 		.gearth-content-container {
 			display: flex;
 			flex-direction: row;
@@ -208,6 +208,12 @@
 			.proyect-icon {
 				display: none;
 			}
+		}
+	}
+
+	@include xxl {
+		.desktop-selector {
+			padding-right: 10%;
 		}
 	}
 }

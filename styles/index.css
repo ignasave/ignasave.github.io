@@ -59,7 +59,7 @@ nav ul li:hover {
   text-decoration: underline;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1740px) {
   nav {
     padding-left: 70px;
     padding-right: 100px;
@@ -124,6 +124,7 @@ footer .left-section ul {
 }
 
 footer .left-section ul li a {
+  text-decoration: none;
   color: #ffffff;
 }
 
@@ -148,7 +149,7 @@ footer .icons img {
   padding-right: 5px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1740px) {
   footer {
     padding: 0;
     padding-left: 160px;
@@ -257,7 +258,7 @@ footer .icons img {
   content: url("../assets/double-arrow-left.svg");
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1740px) {
   .mobile-side-buttons {
     top: 90px;
     left: 0;
@@ -304,6 +305,7 @@ header h3 {
 }
 
 header .down-indicator {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,25 +345,11 @@ header .down-indicator .animated-icon {
   animation: animated-icon-anim 0.8s infinite alternate-reverse;
 }
 
-@media (min-width: 992px) {
-  header .titles {
-    width: 50%;
-  }
-  header .titles h1 {
-    font-size: 72px;
-    line-height: 86px;
-    letter-spacing: 0.26em;
-    margin: 330px 0 20px 160px;
-    width: 520px;
-    text-align: left;
-  }
-  header .titles h3 {
-    font-size: 34px;
-    line-height: 43px;
-    width: 100%;
-    text-align: left;
-    margin-left: 160px;
-  }
+header .hero {
+  display: none;
+}
+
+@media (min-width: 1740px) {
   header .whole-hero {
     width: 100%;
     display: -webkit-box;
@@ -374,8 +362,27 @@ header .down-indicator .animated-icon {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    height: 100%;
   }
-  header .hero {
+  header .whole-hero .titles {
+    width: 50%;
+  }
+  header .whole-hero .titles h1 {
+    font-size: 72px;
+    line-height: 86px;
+    letter-spacing: 0.26em;
+    margin: 330px 0 20px 160px;
+    width: 520px;
+    text-align: left;
+  }
+  header .whole-hero .titles h3 {
+    font-size: 34px;
+    line-height: 43px;
+    width: 100%;
+    text-align: left;
+    margin-left: 160px;
+  }
+  header .whole-hero .hero {
     background-color: #2C313A;
     width: 50%;
     height: 100%;
@@ -389,10 +396,10 @@ header .down-indicator .animated-icon {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
+    height: 100%;
+  }
+  header .down-indicator {
+    top: 0px;
   }
 }
 
@@ -434,7 +441,7 @@ header .down-indicator .animated-icon {
   height: 170px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1740px) {
   .caniya {
     margin-top: 250px;
     display: -webkit-box;
@@ -475,6 +482,15 @@ header .down-indicator .animated-icon {
     max-width: 910px;
     height: 400px;
     margin-top: 0;
+  }
+}
+
+@media (min-width: 2100px) {
+  .caniya {
+    padding-right: 100px;
+  }
+  .caniya div p {
+    max-width: 80%;
   }
 }
 
@@ -543,7 +559,7 @@ header .down-indicator .animated-icon {
   line-height: 34px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1740px) {
   .skills {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -562,6 +578,16 @@ header .down-indicator .animated-icon {
     margin: 60px auto;
     padding: 6px;
     border-radius: 10px;
+  }
+}
+
+@media (min-width: 2100px) {
+  .skills {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .skills > div {
+    width: 20%;
   }
 }
 
@@ -729,7 +755,7 @@ header .down-indicator .animated-icon {
   display: none;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1740px) {
   .gearthlogic-experience .gearth-content-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -836,6 +862,12 @@ header .down-indicator .animated-icon {
   }
 }
 
+@media (min-width: 2100px) {
+  .gearthlogic-experience .desktop-selector {
+    padding-right: 10%;
+  }
+}
+
 .previous-work-experience {
   margin-top: 100px;
   padding-left: 10px;
@@ -895,7 +927,7 @@ header .down-indicator .animated-icon {
   height: 170px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1740px) {
   .previous-work-experience h3 {
     font-size: 38px;
     line-height: 46px;
@@ -984,7 +1016,7 @@ header .down-indicator .animated-icon {
   text-decoration: none;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1740px) {
   .contact-me h3 {
     font-size: 36px;
     line-height: 43px;
@@ -1035,7 +1067,12 @@ header .down-indicator .animated-icon {
   margin-bottom: 70px;
 }
 
-@media (min-width: 992px) {
+.about-me p a {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+@media (min-width: 1740px) {
   .about-me {
     margin-top: 203px;
     display: -webkit-box;

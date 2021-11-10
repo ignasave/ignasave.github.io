@@ -21,6 +21,7 @@ header {
 	}
 
 	.down-indicator {
+		position: relative;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -38,47 +39,48 @@ header {
 		}
 	}
 
+	.hero {
+		display: none;
+	}
 
-
-	@include lg {
-		.titles {
-			width: 50%;
-			h1 {
-				font-size: 72px;
-				line-height: 86px;
-				letter-spacing: 0.26em;
-				margin: 330px 0 20px 160px;
-				width: 520px;
-				text-align: left;
-			}
-			
-			h3 {
-				font-size: 34px;
-				line-height: 43px;
-				width: 100%;
-				text-align: left;
-				margin-left: 160px;
-			}
-			
-		}
-		.whole-hero{
+	@include xl {
+		.whole-hero {
 			width: 100%;
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
-		}
-		
-		.hero{
-			background-color: $grey-500-bg;
-			width: 50%;
 			height: 100%;
-			display: flex;
-			flex-direction: row;
-			justify-content: end;
-			bottom: 0;
-			top: 0;
-			left: 0;
-			right: 0;
+			.titles {
+				width: 50%;
+				h1 {
+					font-size: 72px;
+					line-height: 86px;
+					letter-spacing: 0.26em;
+					margin: 330px 0 20px 160px;
+					width: 520px;
+					text-align: left;
+				}
+
+				h3 {
+					font-size: 34px;
+					line-height: 43px;
+					width: 100%;
+					text-align: left;
+					margin-left: 160px;
+				}
+			}
+			.hero {
+				background-color: $grey-500-bg;
+				width: 50%;
+				height: 100%;
+				display: flex;
+				flex-direction: row;
+				justify-content: end;
+				height: 100%;
+			}
+		}
+		.down-indicator {
+			top: 0px;
 		}
 	}
 }

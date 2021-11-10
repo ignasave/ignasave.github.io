@@ -35,7 +35,7 @@
 		height: 170px;
 	}
 
-	@include lg {
+	@include xl {
 		margin-top: 250px;
 		display: flex;
 		justify-content: center;
@@ -71,6 +71,15 @@
 			max-width: 910px;
 			height: 400px;
 			margin-top: 0;
+		}
+	}
+
+	@include xxl {
+		padding-right: 100px;
+		div {
+			p {
+				max-width: 80%;
+			}
 		}
 	}
 }

@@ -34,9 +34,13 @@
 		line-height: 18px;
 		color: $bone-text;
 		margin-bottom: 70px;
+		a {
+			color: $white-text;
+			font-weight: bold;
+		}
 	}
 
-	@include lg {
+	@include xl {
 		margin-top: 203px;
 		display: flex;
 		flex-direction: row;
