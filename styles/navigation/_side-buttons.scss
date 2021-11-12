@@ -46,6 +46,7 @@
 	}
 
 	@include xl {
+		transition: none;
 		top: 90px;
 		left: 0;
 		div {
