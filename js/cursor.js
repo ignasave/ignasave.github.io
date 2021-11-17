@@ -1,21 +1,18 @@
 const innerCircle = document.getElementById('pointer-circle-inner');
 const outerCircle = document.getElementById('pointer-circle-outer');
 
-const mouseX = (event) => event.pageX;
-const mouseY = (event) => event.pageY;
-
-const reposition = (element, mouse) => {
-	element.style.left = mouse.x + 'px';
-	element.style.top = mouse.y + 'px';
-};
-
 positionElement = (event) => {
 	const mouse = {
-		x: mouseX(event),
-		y: mouseY(event),
+		x: event.pageX,
+		y: event.pageY,
 	};
-	reposition(innerCircle, mouse);
-	setTimeout(() => reposition(outerCircle, mouse), 100);
+    innerCircle.style.left = mouse.x + 'px';
+	innerCircle.style.top = mouse.y + 'px';
+
+	setTimeout(() => {
+        outerCircle.style.left = mouse.x + 'px';
+        outerCircle.style.top = mouse.y + 'px';
+    }, 100);
 };
 
 let timer = false;
@@ -27,7 +24,6 @@ document.addEventListener('mousemove', (event) => {
 });
 
 document.addEventListener('click', () => {
-    console.log('hola')
     innerCircle.classList.add("shrink");
     outerCircle.classList.add("expand");
     setTimeout(() => {

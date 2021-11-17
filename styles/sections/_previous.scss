@@ -39,7 +39,28 @@
 			color: $bone-text;
 			margin-bottom: 10px;
 			span {
+				font-weight: bold;
+			}
+		}
+		.links {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			margin-bottom: 70px;
+			margin-top: 30px;
+			margin-left: 0;
+			a {
+				color: $white-text;
+				font-weight: 500;
+				font-size: 15px;
+				line-height: 24px;
+				color: $bone-text;
+				margin-right: 20px;
 				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
 			}
 		}
 		img {
@@ -90,6 +111,11 @@
 					line-height: 24px;
 					text-align: justify;
 					margin: 0;
+				}
+				.links {
+					a {
+						font-size: 20px;
+					}
 				}
 				span {
 					margin: 0;

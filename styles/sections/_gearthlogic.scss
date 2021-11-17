@@ -60,6 +60,9 @@
 				color: $bone-text;
 				margin-right: 20px;
 				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
 			}
 		}
 		.proyect-icon {
@@ -232,6 +235,12 @@
 					text-align: justify;
 					margin-left: 0;
 					max-width: 650px;
+				}
+				.links {
+					a{
+						font-size: 20px;
+
+					}
 				}
 			}
 			.proyect-icon {
