@@ -42,7 +42,25 @@
 			line-height: 18px;
 			text-align: center;
 			color: $bone-text;
+
+		}
+		.links {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
 			margin-bottom: 70px;
+			margin-top: 30px;
+			a {
+				color: $white-text;
+				font-weight: 500;
+				font-size: 15px;
+				line-height: 24px;
+				text-align: center;
+				color: $bone-text;
+				margin-right: 20px;
+				text-decoration: underline;
+			}
 		}
 		.proyect-icon {
 			margin: 0 auto;
