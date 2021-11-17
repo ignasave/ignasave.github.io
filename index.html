@@ -26,7 +26,10 @@
 			rel="stylesheet"
 		/>
 		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"
+		></script>
 	</head>
 	<body>
 		<nav>
@@ -44,16 +47,16 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						href="https://www.linkedin.com/in/ignacio-vazquez-12061818a/"
-						><img src="./assets/LinkedIN.svg"
+						><img src="./assets/LinkedIN.svg" alt="LinkedIn"
 					/></a>
 					<a target="_blank" rel="noopener noreferrer" href="https://github.com/ignasave"
-						><img src="./assets/Github.svg"
+						><img src="./assets/Github.svg" alt="Github"
 					/></a>
 					<a target="_blank" rel="noopener noreferrer" href="https://medium.com/@ignasave39"
-						><img src="./assets/Medium.svg"
+						><img src="./assets/Medium.svg" alt="Medium"
 					/></a>
 					<a target="_blank" rel="noopener noreferrer" href="https://wa.me/+542235808489"
-						><img src="./assets/WhatsApp.svg"
+						><img src="./assets/WhatsApp.svg" alt="WhatsApp"
 					/></a>
 				</div>
 				<button onclick="onClickMobileSideButton()" aria-label="open side social network menu">
@@ -98,11 +101,48 @@
 						/>
 						<g>
 							<path
+								id="linePath"
 								stroke="#F3F4F6"
 								stroke-linecap="round"
 								stroke-width="2"
-								d="M562.517 564.246L643 519.102M572.999 480.939l84.688-48.821M445 635.83l117-66.728M572.713 481.202l70.287 37.9"
+								d="M562.517 564.246L643 519.102M643 519.102L572.999 480.939M572.999 480.939l84.688-48.821M445 635.83l117-66.728"
 							/>
+							<circle
+								id="followerCircle"
+								cx="0"
+								cy="0"
+								r="7.45"
+								fill="url(#paint0_radial_299_7)"
+								stroke="url(#paint1_linear_299_7)"
+								stroke-width=".1"
+								transform="rotate(16.952 8.36 8.36)"
+							/>
+							<defs>
+								<radialGradient
+									id="paint0_radial_299_7"
+									cx="0"
+									cy="0"
+									r="1"
+									gradientTransform="matrix(-40.31233 -22.50026 25.76132 -46.15496 27.423 16.884)"
+									gradientUnits="userSpaceOnUse"
+								>
+									<stop offset=".184" stop-color="#3338D6" />
+									<stop offset=".755" stop-color="#2EE6CA" />
+									<stop offset=".781" stop-color="#F7F7F7" />
+								</radialGradient>
+								<linearGradient
+									id="paint1_linear_299_7"
+									x1="-4.139"
+									x2="19.242"
+									y1=".861"
+									y2="12.768"
+									gradientUnits="userSpaceOnUse"
+								>
+									<stop stop-color="#fff" />
+									<stop offset=".567" stop-color="#2EF0D2" />
+									<stop offset="1" stop-color="#3338D6" />
+								</linearGradient>
+							</defs>
 						</g>
 						<g filter="url(#filter0_d_13:61)">
 							<g filter="url(#filter1_f_13:61)">
@@ -416,7 +456,7 @@
 					</svg>
 				</div>
 			</div>
-			
+
 			<div class="down-indicator">
 				<svg xmlns="http://www.w3.org/2000/svg" width="75" height="42" fill="none" viewBox="0 0 75 42">
 					<rect
@@ -660,7 +700,7 @@
 
 			<section class="previous-work-experience">
 				<h3>PREVIOUS WORK EXPERIENCE</h3>
-				<article id='exactian'>
+				<article id="exactian">
 					<div>
 						<h5>Exactian</h5>
 						<h6>
@@ -684,7 +724,7 @@
 
 					<img src="./assets/exactian.png" />
 				</article>
-				<article id='absalon'>
+				<article id="absalon">
 					<div>
 						<h5>tarot absalon</h5>
 						<h6>Mobile Development</h6>
@@ -779,7 +819,11 @@
 			</footer>
 		</main>
 
+		<div id="pointer-circle-inner"></div>
+		<div id="pointer-circle-outer"></div>
+
 		<script src="./js/index.js"></script>
-		<script src='./js/animation.js'></script>
+		<script src="./js/cursor.js"></script>
+		<script src="./js/animation.js"></script>
 	</body>
 </html>

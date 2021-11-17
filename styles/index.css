@@ -4,6 +4,97 @@
 /* -------------- Gradients -------------- */
 /* -------------- Fonts -------------- */
 /* -------------- Font Stacks -------------- */
+#pointer-circle-inner {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  margin-top: 3.5px;
+  margin-left: 3.5px;
+}
+
+#pointer-circle-outer {
+  position: absolute;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  margin-top: 0em;
+  margin-left: 0em;
+}
+
+@-webkit-keyframes animExpandCursor {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes animExpandCursor {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes animShrinkCursor {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes animShrinkCursor {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.expand {
+  -webkit-animation: animExpandCursor .5s forwards;
+          animation: animExpandCursor .5s forwards;
+}
+
+.shrink {
+  -webkit-animation: animShrinkCursor .5s forwards;
+          animation: animShrinkCursor .5s forwards;
+}
+
 /*--------- Navigation ---------*/
 nav {
   display: -webkit-box;
@@ -39,7 +130,6 @@ nav ul {
 
 nav ul li {
   float: left;
-  cursor: pointer;
 }
 
 nav ul li a {
@@ -797,11 +887,11 @@ header .hero {
             align-items: center;
     background-color: #f3f4f6;
     border-radius: 10px;
+    padding: 6px;
   }
   .gearthlogic-experience .desktop-selector .icon.selected {
     background: linear-gradient(153.85deg, rgba(213, 95, 222, 0.68) 0%, rgba(51, 56, 214, 0.8) 100%);
     border-radius: 10px;
-    padding: 6px;
   }
   .gearthlogic-experience .desktop-selector .icon.selected div {
     display: -webkit-box;
@@ -818,8 +908,21 @@ header .hero {
     background-color: #f3f4f6;
     border-radius: 10px;
   }
+  .gearthlogic-experience .desktop-selector .icon.selected img {
+    -webkit-filter: none;
+            filter: none;
+  }
   .gearthlogic-experience .desktop-selector .icon img {
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
     width: 160px;
+  }
+  .gearthlogic-experience .desktop-selector .icon:hover img {
+    -webkit-filter: none;
+            filter: none;
+    width: 180px;
   }
   .gearthlogic-experience .proyect.selected {
     display: -webkit-box;
@@ -1127,7 +1230,13 @@ header .hero {
           box-sizing: border-box;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
+  cursor: none;
   background-color: #0c0d10;
   color: #f3f4f6;
   font-family: "Barlow", sans-serif;
@@ -1139,6 +1248,27 @@ body {
 }
 
 a {
-  cursor: pointer;
+  cursor: none !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darkgrey;
 }
 /*# sourceMappingURL=index.css.map */

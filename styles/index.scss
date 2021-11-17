@@ -3,6 +3,7 @@
 @import 'colors';
 @import 'fonts';
 @import 'breakpoints';
+@import 'cursor';
 
 /*--------- Navigation ---------*/
 
@@ -26,7 +27,13 @@
 	box-sizing: border-box;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
+	cursor: none;
 	background-color: $main-bg;
 	color: $bone-text;
 	font-family: $barlow-font;
@@ -38,5 +45,26 @@ body {
 }
 
 a {
-	cursor: pointer;
+	cursor: none !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: grey;
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: darkgrey;
 }

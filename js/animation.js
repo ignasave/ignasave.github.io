@@ -1,6 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
 	/* -- NAV -- */
+	anime({
+		targets: 'nav',
+		opacity: [0, 1],
+		easing: 'easeOutExpo',
+		translateY: [-200, 0],
+	});
+	anime({
+		targets: '.mobile-side-buttons',
+		opacity: [0, 1],
+		easing: 'easeOutExpo',
+		translateX: [-200, 0],
+	});
 
+	/* -- HEADER -- */
+	var path = anime.path('#linePath');
+	console.log(path, document.querySelector('#followerCircle'));
+	anime({
+		targets: '#followerCircle',
+		translateX: path('x'),
+		translateY: path('y'),
+		rotate: path('angle'),
+		easing: 'linear',
+		duration: 2000,
+		loop: true,
+	});
 
 	/* -- CANI YA -- */
 	new Waypoint({
@@ -46,7 +70,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		offset: '100%',
 	});
-
+	new Waypoint({
+		element: document.querySelector('.caniya img'),
+		handler: function () {
+			anime({
+				targets: '.caniya img',
+				opacity: [0.5, 1],
+				easing: 'easeOutExpo',
+				translateX: [100, 0],
+				duration: 10000,
+			});
+			this.destroy();
+		},
+		offset: '100%',
+	});
 	/* -- SKILLS -- */
 	new Waypoint({
 		element: document.querySelector('.skills .ux-ui'),
@@ -239,6 +276,21 @@ document.addEventListener('DOMContentLoaded', () => {
 		offset: '100%',
 	});
 	new Waypoint({
+		element: document.querySelector('.previous-work-experience #exactian img'),
+		handler: function () {
+			anime({
+				targets: '.previous-work-experience #exactian img',
+				opacity: [0.5, 1],
+				easing: 'easeOutExpo',
+				translateX: [100, 0],
+				duration: 10000,
+			});
+			this.destroy();
+		},
+		offset: '100%',
+	});
+
+	new Waypoint({
 		element: document.querySelector('.previous-work-experience #absalon h5'),
 		handler: function () {
 			anime({
@@ -289,6 +341,20 @@ document.addEventListener('DOMContentLoaded', () => {
 				translateX: [-100, 0],
 				opacity: [0, 1],
 				delay: 400,
+			});
+			this.destroy();
+		},
+		offset: '100%',
+	});
+	new Waypoint({
+		element: document.querySelector('.previous-work-experience #absalon img'),
+		handler: function () {
+			anime({
+				targets: '.previous-work-experience #absalon img',
+				opacity: [0.5, 1],
+				easing: 'easeOutExpo',
+				translateX: [100, 0],
+				duration: 12000,
 			});
 			this.destroy();
 		},
