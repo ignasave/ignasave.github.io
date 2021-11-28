@@ -203,6 +203,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		offset: '100%',
 	});
+	new Waypoint({
+		element: document.querySelector('.gearthlogic-experience .links'),
+		handler: function () {
+			anime({
+				targets: '.gearthlogic-experience .links',
+				easing: 'easeOutExpo',
+				translateX: [-100, 0],
+				opacity: [0, 1],
+				delay: 400,
+			});
+			this.destroy();
+		},
+
+		offset: '100%',
+	});
 
 	/* -- PREVIOUS -- */
 	new Waypoint({
@@ -276,6 +291,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		offset: '100%',
 	});
 	new Waypoint({
+		element: document.querySelector('.previous-work-experience #exactian .links'),
+		handler: function () {
+			anime({
+				targets: '.previous-work-experience #exactian .links',
+				easing: 'easeOutExpo',
+				translateX: [-100, 0],
+				opacity: [0, 1],
+				delay: 500,
+			});
+			this.destroy();
+		},
+		offset: '100%',
+	});
+	new Waypoint({
 		element: document.querySelector('.previous-work-experience #exactian img'),
 		handler: function () {
 			anime({
@@ -341,6 +370,20 @@ document.addEventListener('DOMContentLoaded', () => {
 				translateX: [-100, 0],
 				opacity: [0, 1],
 				delay: 400,
+			});
+			this.destroy();
+		},
+		offset: '100%',
+	});
+	new Waypoint({
+		element: document.querySelector('.previous-work-experience #absalon .links'),
+		handler: function () {
+			anime({
+				targets: '.previous-work-experience #absalon .links',
+				easing: 'easeOutExpo',
+				translateX: [-100, 0],
+				opacity: [0, 1],
+				delay: 500,
 			});
 			this.destroy();
 		},

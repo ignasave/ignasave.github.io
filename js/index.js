@@ -26,11 +26,15 @@ const onClickMobileSideSelectorButton = () => {
 const onChangeProject = (projectID) => {
 	const project = document.getElementById(projectID);
 	const projects = document.getElementsByClassName('proyect');
+	const desktopIcons = document.querySelectorAll('.desktop-selector .icon');
+	const desktopIcon = document.getElementById('icon-' + projectID);
 
 	for (let i = 0; i < projects.length; i++) {
 		projects[i].classList.remove('selected');
+		desktopIcons[i].classList.remove('selected');
 	}
 
+	desktopIcon.classList.add('selected');
 	project.classList.add('selected');
 	selectedProjectID = projectID;
 }
