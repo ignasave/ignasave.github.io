@@ -35,6 +35,43 @@
 		height: 170px;
 	}
 
+	@include lg {
+		margin-top: 150px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		div {
+			text-align: left;
+			width: 50%;
+			height: 100%;
+			margin-left: 40px;
+
+			h3 {
+				font-size: 28px;
+				line-height: 46px;
+				letter-spacing: 0.345em;
+			}
+
+			h4 {
+				font-size: 20px;
+			}
+
+			p {
+				max-width: 400px;
+				font-size: 16px;
+				line-height: 24px;
+				text-align: justify;
+				margin: 0;
+				padding: 0;
+				padding-top: 14px;
+			}
+		}
+		img {
+			max-width: 45%;
+			margin-top: 0;
+		}
+	}
+
 	@include xl {
 		margin-top: 250px;
 		display: flex;

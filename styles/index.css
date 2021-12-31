@@ -445,6 +445,60 @@ header .hero {
   display: none;
 }
 
+@media (min-width: 992px) {
+  header .whole-hero {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+  }
+  header .whole-hero .titles {
+    width: 50%;
+  }
+  header .whole-hero .titles h1 {
+    font-size: 45px;
+    line-height: 50px;
+    letter-spacing: 0.26em;
+    margin: 230px 0 20px 40px;
+    width: 520px;
+    text-align: left;
+  }
+  header .whole-hero .titles h3 {
+    font-size: 20px;
+    width: 100%;
+    text-align: left;
+    margin-left: 40px;
+  }
+  header .whole-hero .hero {
+    background-color: #2C313A;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  header .down-indicator {
+    top: -100px;
+  }
+}
+
 @media (min-width: 1740px) {
   header .whole-hero {
     width: 100%;
@@ -535,6 +589,48 @@ header .hero {
   margin-top: 40px;
   width: 95%;
   height: 170px;
+}
+
+@media (min-width: 992px) {
+  .caniya {
+    margin-top: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .caniya div {
+    text-align: left;
+    width: 50%;
+    height: 100%;
+    margin-left: 40px;
+  }
+  .caniya div h3 {
+    font-size: 28px;
+    line-height: 46px;
+    letter-spacing: 0.345em;
+  }
+  .caniya div h4 {
+    font-size: 20px;
+  }
+  .caniya div p {
+    max-width: 400px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+    padding-top: 14px;
+  }
+  .caniya img {
+    max-width: 45%;
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 1740px) {
@@ -653,6 +749,30 @@ header .hero {
   font-weight: 500;
   font-size: 28px;
   line-height: 34px;
+}
+
+@media (min-width: 992px) {
+  .skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 80px;
+  }
+  .skills > div {
+    width: 40%;
+    margin: 60px auto;
+    padding: 6px;
+    border-radius: 10px;
+  }
 }
 
 @media (min-width: 1740px) {
@@ -800,6 +920,7 @@ header .hero {
 
 .gearthlogic-experience .proyect .proyect-icon div img {
   width: 75%;
+  max-height: 90%;
 }
 
 .gearthlogic-experience .proyect.selected {
@@ -882,6 +1003,132 @@ header .hero {
 
 .gearthlogic-experience .desktop-selector {
   display: none;
+}
+
+@media (min-width: 992px) {
+  .gearthlogic-experience .gearth-content-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 60px;
+  }
+  .gearthlogic-experience h3 {
+    font-size: 28px;
+    line-height: 46px;
+    letter-spacing: 0.345em;
+  }
+  .gearthlogic-experience .mobile-side-selector {
+    display: none;
+  }
+  .gearthlogic-experience .desktop-selector {
+    width: 50%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  .gearthlogic-experience .desktop-selector .icon {
+    aspect-ratio: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    padding: 6px;
+  }
+  .gearthlogic-experience .desktop-selector .icon.selected {
+    background: linear-gradient(153.85deg, rgba(213, 95, 222, 0.68) 0%, rgba(51, 56, 214, 0.8) 100%);
+    border-radius: 10px;
+  }
+  .gearthlogic-experience .desktop-selector .icon.selected div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #f3f4f6;
+    border-radius: 10px;
+  }
+  .gearthlogic-experience .desktop-selector .icon.selected img {
+    -webkit-filter: none;
+            filter: none;
+  }
+  .gearthlogic-experience .desktop-selector .icon img {
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+    width: 100px;
+  }
+  .gearthlogic-experience .desktop-selector .icon:hover img {
+    -webkit-filter: none;
+            filter: none;
+    width: 80px;
+  }
+  .gearthlogic-experience .proyect.selected {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 50%;
+  }
+  .gearthlogic-experience .proyect .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 40px;
+  }
+  .gearthlogic-experience .proyect .content h5 {
+    text-align: left;
+    font-size: 28px;
+    letter-spacing: 0.245em;
+  }
+  .gearthlogic-experience .proyect .content h6 {
+    text-align: left;
+    font-size: 20px;
+  }
+  .gearthlogic-experience .proyect .content p {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: justify;
+    margin-left: 0;
+    max-width: 400px;
+  }
+  .gearthlogic-experience .proyect .content .links {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .gearthlogic-experience .proyect .content .links a {
+    font-size: 16px;
+  }
+  .gearthlogic-experience .proyect .proyect-icon {
+    display: none;
+  }
 }
 
 @media (min-width: 1740px) {
@@ -1110,6 +1357,80 @@ header .hero {
   height: 170px;
 }
 
+@media (min-width: 992px) {
+  .previous-work-experience h3 {
+    font-size: 28px;
+    line-height: 46px;
+    letter-spacing: 0.345em;
+  }
+  .previous-work-experience article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .previous-work-experience article div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 50%;
+    margin-left: 40px;
+  }
+  .previous-work-experience article div h5 {
+    font-size: 28px;
+    line-height: 46px;
+    letter-spacing: 0.345em;
+    text-align: left;
+    max-width: 100%;
+  }
+  .previous-work-experience article div h6 {
+    text-align: left;
+    font-size: 20px;
+    line-height: 34px;
+  }
+  .previous-work-experience article div h6 br {
+    display: none;
+  }
+  .previous-work-experience article div p {
+    max-width: 400px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: justify;
+    margin: 0;
+  }
+  .previous-work-experience article div .links {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .previous-work-experience article div .links a {
+    font-size: 16px;
+  }
+  .previous-work-experience article div span {
+    margin: 0;
+    text-align: left;
+    font-size: 16px;
+  }
+  .previous-work-experience article img {
+    max-width: 50%;
+    width: 50%;
+    height: auto;
+  }
+}
+
 @media (min-width: 1740px) {
   .previous-work-experience h3 {
     font-size: 38px;
@@ -1186,6 +1507,8 @@ header .hero {
 .contact-me {
   margin-top: 120px;
   margin-bottom: 120px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .contact-me h3 {

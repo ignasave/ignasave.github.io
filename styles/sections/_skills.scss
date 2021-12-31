@@ -56,6 +56,20 @@
 		}
 	}
 
+	@include lg {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 80px;
+		& > div {
+			width: 40%;
+			margin: 60px auto;
+			padding: 6px;
+			border-radius: 10px;
+		}
+	}
+
 	@include xl {
 		display: flex;
 		flex-direction: row;
