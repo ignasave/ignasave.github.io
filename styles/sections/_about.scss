@@ -9,6 +9,7 @@
 		letter-spacing: 0.35em;
 		text-transform: uppercase;
 		color: $white-text;
+		margin-bottom: 150px;
 	}
 	h5 {
 		margin-bottom: 20px;
@@ -41,6 +42,24 @@
 		}
 	}
 
+	.about-me-img-container {
+		width: 100%;
+		margin: 0 auto;
+		padding: 6px;
+		border-radius: 60px 0px;
+		max-width: 450px;
+		background: $purple-black-gradient;
+		.skill-content {
+			background: $main-bg;
+			border-radius: 60px 0px;
+			text-align: center;
+			height: 100%;
+			img {
+				margin: 50px
+			}
+		}
+	}
+
 	@include xl {
 		margin-top: 203px;
 		display: flex;
@@ -53,7 +72,7 @@
 			letter-spacing: 0.35em;
 		}
 
-		div {
+		.about-me-text-block {
 			margin-left: 160px;
 			width: 50%;
 			align-self: flex-end;

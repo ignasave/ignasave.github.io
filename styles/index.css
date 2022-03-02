@@ -1551,6 +1551,7 @@ header .hero {
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: #ffffff;
+  margin-bottom: 150px;
 }
 
 .about-me h5 {
@@ -1587,6 +1588,26 @@ header .hero {
   font-weight: bold;
 }
 
+.about-me .about-me-img-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 6px;
+  border-radius: 60px 0px;
+  max-width: 450px;
+  background: linear-gradient(146.06deg, #8A54DE 1.14%, #20232A 30.78%, #20232A 51.69%, #20232A 69.99%, #3034B3 100%);
+}
+
+.about-me .about-me-img-container .skill-content {
+  background: #0c0d10;
+  border-radius: 60px 0px;
+  text-align: center;
+  height: 100%;
+}
+
+.about-me .about-me-img-container .skill-content img {
+  margin: 50px;
+}
+
 @media (min-width: 1740px) {
   .about-me {
     margin-top: 203px;
@@ -1606,24 +1627,24 @@ header .hero {
     line-height: 43px;
     letter-spacing: 0.35em;
   }
-  .about-me div {
+  .about-me .about-me-text-block {
     margin-left: 160px;
     width: 50%;
     -ms-flex-item-align: end;
         align-self: flex-end;
     text-align: left;
   }
-  .about-me div h5 {
+  .about-me .about-me-text-block h5 {
     font-size: 38px;
     line-height: 46px;
     letter-spacing: 0.345em;
     font-weight: 600;
   }
-  .about-me div h6 {
+  .about-me .about-me-text-block h6 {
     font-size: 28px;
     line-height: 34px;
   }
-  .about-me div p {
+  .about-me .about-me-text-block p {
     max-width: 650px;
     margin: 0;
     font-size: 20px;
